@@ -11,16 +11,8 @@ frontend:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: dist
     files:
-      - 'assets/**/*'
+      - '**/*'
   cache:
     paths:
       - node_modules/**/*
-  customHeaders:
-    - pattern: '*.js'
-      headers:
-        - key: 'Content-Type'
-          value: 'application/javascript'
-    - pattern: '*.css'
-      headers:
-        - key: 'Content-Type'
-          value: 'text/css'
+  
