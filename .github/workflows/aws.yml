@@ -44,7 +44,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
       # Copy the files from build folder to the S3 bucket
       - name: Deploy to S3
-        run: aws s3 sync . s3://detedia --acl public-read
+        run: aws s3 sync . s3://detedia
         working-directory: detedia-build
   release:
     runs-on: ubuntu-latest
