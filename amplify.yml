@@ -11,7 +11,7 @@ frontend:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: dist
     files:
-      - '**/*'
+      - 'assets/**/*'
   cache:
     paths:
       - node_modules/**/*
