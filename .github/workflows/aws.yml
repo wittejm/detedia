@@ -71,9 +71,9 @@ jobs:
           path: detedia-release-build.zip
       # Make official GitHub release which will trigger
       # sending the mail with link for access
-      - name: Release
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: detedia-release-build.zip
-          body: https://detedia.s3.amazonaws.com/index.html
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Release
+      #  uses: ncipollo/release-action@v1
+      #  with:
+      #    artifacts: detedia-release-build.zip
+      #    body: https://detedia.s3.amazonaws.com/index.html
+      #    token: ${{ secrets.GITHUB_TOKEN }}
