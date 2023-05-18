@@ -1,3 +1,4 @@
+name: S3 Deploy
 
 on:
   push:
