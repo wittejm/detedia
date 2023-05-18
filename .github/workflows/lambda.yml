@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy Lambda function
         run: |
-          aws lambda create-function \
+          aws lambda update-function-code \
             --function-name puzzle \
             --runtime python3.10 \
             --handler lambda_function.handler \
