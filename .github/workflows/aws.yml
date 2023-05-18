@@ -15,9 +15,9 @@ jobs:
         with:
           node-version: 16.6.1
       - name: Install dependencies
-        run: npm install    
+        run: cd frontend && npm install    
       - name: Generate build
-        run: npm run build
+        run: cd frontend && npm run build
       # Share artifact inside workflow
       - name: Share artifact inside workflow
         uses: actions/upload-artifact@v1
