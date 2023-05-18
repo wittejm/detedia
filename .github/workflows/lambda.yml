@@ -22,7 +22,7 @@ jobs:
         run: cd backend && pip install -r requirements.txt
 
       - name: Package Lambda function
-        run: zip -r lambda-function.zip backend/puzzle/
+        run: zip -r lambda_function.zip backend/puzzle/
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -48,4 +48,4 @@ jobs:
           fi
           
       - name: Clean up
-        run: rm lambda-function.zip
+        run: rm lambda_function.zip
