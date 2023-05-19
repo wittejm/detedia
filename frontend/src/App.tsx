@@ -45,6 +45,10 @@ function App() {
   };
 
   useEffect(()=>changePuzzle(0),[])
+
+    console.log("import.meta.env.VITE_API_URL/puzzle", import.meta.env.VITE_API_URL)
+   fetch(`${import.meta.env.VITE_API_URL}/puzzle`).then(response=>response.json().then(data=>console.log(data)));
+
   return (
     <div className="DetediaPage">
       <HeaderControls
