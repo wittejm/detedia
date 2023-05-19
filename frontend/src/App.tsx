@@ -47,7 +47,7 @@ function App() {
   useEffect(()=>changePuzzle(0),[])
 
   console.log("import.meeta.env.VITE_API_URL/puzzle", import.meta.env.VITE_API_URL)
-  fetch(`${import.meta.env.VITE_API_URL}/puzzle`).then(response=>response.json().then(data=>console.log(data)));
+  fetch(`${import.meta.env.VITE_API_URL}/puzzle?puzzle_number=500`).then(response=>response.json().then(data=>console.log(data)));
 
   return (
     <div className="DetediaPage">
