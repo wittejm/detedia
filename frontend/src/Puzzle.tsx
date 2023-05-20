@@ -110,6 +110,7 @@ export default function Puzzle({
               source,
               sourceWordIndex,
             )}
+            key={sourceWordIndex}
           />
         );
       })}

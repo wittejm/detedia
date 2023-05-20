@@ -37,6 +37,7 @@ export default function PuzzleRow({
             letter={letter}
             onClick={() => setCursorIndex(5 * rowIndex + index)}
             redHighlight={redHighlights[index]}
+            key={index}
           />
         );
       })}

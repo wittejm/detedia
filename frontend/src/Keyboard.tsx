@@ -26,40 +26,39 @@ export default function Keyboard({
   return (
     <div>
       {[row1, row2, row3].map((row, rowIndex) => (
-        <>
-          <div className="keyboardRow">
-            {row.split("").map((letter) => (
-              <KeyButton
-                letter={letter}
-                usage={usageAllLetters[letter]}
-                activePuzzleIndex={activePuzzleIndex}
-                guess={guess}
-                setGuess={setGuess}
-                cursorIndex={cursorIndex}
-                setCursorIndex={setCursorIndex}
-                submissions={submissions}
-              />
-            ))}
+        <div className="keyboardRow" key={rowIndex}>
+          {row.split("").map((letter) => (
+            <KeyButton
+              letter={letter}
+              usage={usageAllLetters[letter]}
+              activePuzzleIndex={activePuzzleIndex}
+              guess={guess}
+              setGuess={setGuess}
+              cursorIndex={cursorIndex}
+              setCursorIndex={setCursorIndex}
+              submissions={submissions}
+              key={letter}
+            />
+          ))}
 
-            {rowIndex === 2 && (
-              <div
-                className="delButton"
-                onClick={() =>
-                  handleKeyInput(
-                    "Backspace",
-                    activePuzzleIndex,
-                    guess,
-                    setGuess,
-                    cursorIndex,
-                    setCursorIndex,
-                  )
-                }
-              >
-                DEL
-              </div>
-            )}
-          </div>
-        </>
+          {rowIndex === 2 && (
+            <div
+              className="delButton"
+              onClick={() =>
+                handleKeyInput(
+                  "Backspace",
+                  activePuzzleIndex,
+                  guess,
+                  setGuess,
+                  cursorIndex,
+                  setCursorIndex,
+                )
+              }
+            >
+              DEL
+            </div>
+          )}
+        </div>
       ))}
     </div>
   );
@@ -114,7 +113,8 @@ function KeyButton({
       </span>
 
       <svg
-        xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
         viewBox={`0 0 ${width} ${height}`}
         width={width}
         height={height}
@@ -146,6 +146,7 @@ function KeyButton({
                 blank: "#DCDCDC",
               }[color]
             }
+            key={index}
           />
         ))}
       </svg>
@@ -180,7 +181,6 @@ function keyIsMissing(
     color === "yellow" &&
     !thisRowGuess.some((guessKey) => guessKey === letter) &&
     !thisRowGuess.some((guessKey) => guessKey === " ")
-
   ) {
     return true;
   }
