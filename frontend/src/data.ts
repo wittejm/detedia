@@ -1,4 +1,10 @@
-const data = [
+const data: {puzzleNumber: number, words: string[]}[] = [
+  { puzzleNumber: 700, words: ["creep", "night", "flays", "flask"] },
+  { puzzleNumber: 698, words: ["grift", "adore", "scorn", "sworn", "shorn"] },
+  { puzzleNumber: 697, words: ["miser", "tough", "pally", "plaza", "plank"] },
+  { puzzleNumber: 696, words: ["sprog", "field", "unlet", "metal", "latte"] },
+  { puzzleNumber: 695, words: ["bagel", "taste", "paire", "mauve", "canoe"] },
+  { puzzleNumber: 694, words: ["yield", "frogs", "scarf"] },
   { puzzleNumber: 693, words: ["scree", "acron", "acrid"] },
   { puzzleNumber: 692, words: ["proto", "niche", "chunk", "snack"] },
   { puzzleNumber: 691, words: ["waits", "round", "chore", "grovy", "broom"] },
