@@ -1,4 +1,4 @@
-import GameSquare from "./GameSquare";
+import PuzzleSquare from "./PuzzleSquare";
 import React from "react";
 import valid from "./valid";
 
@@ -11,7 +11,7 @@ type Props = {
   redHighlights: boolean[];
 };
 
-export default function GameRow({
+export default function PuzzleRow({
   letters,
   byg,
   cursorIndex,
@@ -31,7 +31,7 @@ export default function GameRow({
       {letters.map((letter, index) => {
         const color = byg[index];
         return (
-          <GameSquare
+          <PuzzleSquare
             hasCursor={cursorIndex === index}
             color={byg[index]}
             letter={letter}

@@ -7,7 +7,7 @@ type Props = {
   onClick: () => void;
   redHighlight: boolean;
 };
-export default function GameSquare({
+export default function PuzzleSquare({
   hasCursor,
   color,
   letter,

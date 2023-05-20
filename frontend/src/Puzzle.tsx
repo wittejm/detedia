@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import data from "./data";
-import GameRow from "./GameRow";
+import PuzzleRow from "./PuzzleRow";
 import valid from "./valid";
 
 type Props = {
@@ -91,7 +91,7 @@ export default function Puzzle({
     <div>
       {source.map((sourceWord, sourceWordIndex) => {
         return (
-          <GameRow
+          <PuzzleRow
             byg={computeByg(sourceWord, source[source.length - 1])}
             letters={guess.slice(
               5 * sourceWordIndex,
