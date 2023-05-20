@@ -11,7 +11,7 @@ export default function App() {
       children: [
         {
           index: true,
-          element: <PuzzlePage />,
+          element: <PuzzlePage activePuzzleIndex={0} />,
         },
         {
           path: ":puzzleId",

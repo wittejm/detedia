@@ -1,24 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import data from "./data";
 import { computeByg } from "./Puzzle";
 
 type Props = {
   activePuzzleIndex: number;
-  changePuzzle: (arg0: number) => void;
 };
 
-function HeaderControls({ activePuzzleIndex, changePuzzle }: Props) {
+function HeaderControls({ activePuzzleIndex }: Props) {
+  const navigate = useNavigate();
   return (
     <div className="headerBlock">
-      <NavButton text="<<" onClick={() => changePuzzle(data.length - 1)} />
+      <NavButton text="<<" onClick={() => navigate(`/${data[data.length - 1].puzzleNumber}`)} />
       <NavButton
         text="<"
         onClick={() =>
-          changePuzzle(
-            activePuzzleIndex === data.length - 1
-              ? data.length - 1
-              : activePuzzleIndex + 1,
-          )
+          navigate(`/${data[Math.min(data.length-1, activePuzzleIndex+1)].puzzleNumber}`)
+
         }
       />
       <div style={{ margin: "0 1em" }}>
@@ -30,10 +28,10 @@ function HeaderControls({ activePuzzleIndex, changePuzzle }: Props) {
       <NavButton
         text=">"
         onClick={() =>
-          changePuzzle(activePuzzleIndex === 0 ? 0 : activePuzzleIndex - 1)
+          navigate(`/${data[Math.max(0, activePuzzleIndex-1)].puzzleNumber}`)
         }
       />
-      <NavButton text=">>" onClick={() => changePuzzle(0)} />
+      <NavButton text=">>" onClick={() => navigate(`/${data[0].puzzleNumber}`)} />
     </div>
   );
 }

@@ -20,8 +20,13 @@ function submitGuess(
   setGuess(correctLetters);
 }
 
-function PuzzlePage() {
-  const [activePuzzleIndex, setActivePuzzleIndex] = useState(0);
+type Props = {
+  activePuzzleIndex: number;
+};
+
+function PuzzlePage({ activePuzzleIndex }: Props) {
+  //console.log("page with index", activePuzzleIndex);
+  //console.log(data[activePuzzleIndex]);
   const [guess, setGuess] = useState<string[]>(
     Array(5 * data[activePuzzleIndex].words.length).fill(" "),
   );
@@ -29,7 +34,7 @@ function PuzzlePage() {
   const [submissions, setSubmissions] = useState<string[][]>([]);
 
   const changePuzzle = (puzzleIndex: number) => {
-    setActivePuzzleIndex(puzzleIndex);
+    console.log("in change puzzle");
     const priorSubmissions = getProgressFromStorage(puzzleIndex);
     setSubmissions(priorSubmissions);
     if (priorSubmissions.length > 0) {
@@ -44,17 +49,19 @@ function PuzzlePage() {
     setCursorIndex(0);
   };
 
-  useEffect(()=>changePuzzle(0),[])
+  useEffect(() => changePuzzle(activePuzzleIndex), [activePuzzleIndex]);
 
-  console.log("import.meeta.env.VITE_API_URL/puzzle", import.meta.env.VITE_API_URL)
-  fetch(`${import.meta.env.VITE_API_URL}/puzzle?puzzle_number=500`).then(response=>response.json().then(data=>console.log(data)));
+  console.log(
+    "import.meeta.env.VITE_API_URL/puzzle",
+    import.meta.env.VITE_API_URL,
+  );
+  fetch(`${import.meta.env.VITE_API_URL}/puzzle?puzzle_number=500`).then(
+    (response) => response.json().then((data) => console.log(data)),
+  );
 
   return (
     <div className="DetediaPage">
-      <HeaderControls
-        activePuzzleIndex={activePuzzleIndex}
-        changePuzzle={changePuzzle}
-      />
+      <HeaderControls activePuzzleIndex={activePuzzleIndex} />
       <Puzzle
         activePuzzleIndex={activePuzzleIndex}
         guess={guess}
@@ -189,6 +196,7 @@ function getCorrectLettersFromGuess(
   guess: string[],
   activePuzzleIndex: number,
 ) {
+  console.log("in getCorrect", data[activePuzzleIndex])
   return guess.map((letter, index) => {
     const wordIndex = Math.floor(index / 5);
     const sourceLetter = data[activePuzzleIndex].words[wordIndex][index % 5];
