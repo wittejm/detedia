@@ -2,6 +2,7 @@
   "name": "detedia",
   "private": true,
   "version": "0.0.0",
+  "homepage": "/detedia/#",
   "type": "module",
   "scripts": {
     "dev": "vite",
