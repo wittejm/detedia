@@ -1,8 +1,7 @@
 import React from "react";
-import { Outlet, useRoutes } from "react-router-dom";
+import { Navigate, Outlet, useRoutes } from "react-router-dom";
 import PuzzleLoader from "./PuzzleLoader";
-import PuzzlePage from "./PuzzlePage";
-
+import data from './data';
 export default function App() {
   const routedPages = useRoutes([
     {
@@ -11,7 +10,7 @@ export default function App() {
       children: [
         {
           index: true,
-          element: <PuzzlePage activePuzzleIndex={0} />,
+          element: <Navigate replace to={`/${data[0].puzzleNumber}`} />,
         },
         {
           path: ":puzzleId",
