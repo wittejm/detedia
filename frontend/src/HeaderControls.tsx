@@ -1,5 +1,11 @@
+import {
+  Construction,
+  FormatListBulleted,
+  QuestionMark,
+} from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import data from "./data";
 import { computeByg } from "./Puzzle";
 
@@ -11,27 +17,57 @@ function HeaderControls({ activePuzzleIndex }: Props) {
   const navigate = useNavigate();
   return (
     <div className="headerBlock">
-      <NavButton text="<<" onClick={() => navigate(`/${data[data.length - 1].puzzleNumber}`)} />
-      <NavButton
-        text="<"
-        onClick={() =>
-          navigate(`/${data[Math.min(data.length-1, activePuzzleIndex+1)].puzzleNumber}`)
-
-        }
-      />
-      <div style={{ margin: "0 1em" }}>
-        <h1>
+      <div className="titleBlock">
+        <div className="title">Detedia</div>
+        <div className="pageButtons">
+          {/*}
+          <div className="pageButton">
+            <QuestionMark />
+          </div>
+          <div className="pageButton">
+            <FormatListBulleted />
+          </div>
+          */}
+          <div className="pageButton">
+            <Button component={Link} to="/maker">
+              <Construction />{" "}
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="headerControlsBlock">
+        <NavButton
+          text="<<"
+          onClick={() => navigate(`/${data[data.length - 1].puzzleNumber}`)}
+        />
+        <NavButton
+          text="<"
+          onClick={() =>
+            navigate(
+              `/${
+                data[Math.min(data.length - 1, activePuzzleIndex + 1)]
+                  .puzzleNumber
+              }`,
+            )
+          }
+        />
+        <div className="headerText">
           {data[activePuzzleIndex].puzzleNumber}
           {obeysSuperHardMode(activePuzzleIndex) ? "" : "!"}
-        </h1>
+        </div>
+        <NavButton
+          text=">"
+          onClick={() =>
+            navigate(
+              `/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`,
+            )
+          }
+        />
+        <NavButton
+          text=">>"
+          onClick={() => navigate(`/${data[0].puzzleNumber}`)}
+        />
       </div>
-      <NavButton
-        text=">"
-        onClick={() =>
-          navigate(`/${data[Math.max(0, activePuzzleIndex-1)].puzzleNumber}`)
-        }
-      />
-      <NavButton text=">>" onClick={() => navigate(`/${data[0].puzzleNumber}`)} />
     </div>
   );
 }

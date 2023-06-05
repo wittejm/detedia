@@ -50,6 +50,14 @@ h1 {
   height: 40px;
   transition: border-color 0.25s;
 }
+.pageButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pageButton {
+  margin: 0 0.4em;
+}
 button {
   font-size: 1.3em;
   padding-left: 6px;
@@ -73,9 +81,28 @@ button:disabled {
   flex-direction: column;
   align-items: center;
 }
+
 .headerBlock {
+  margin: 0.5em;
+}
+.titleBlock {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.headerControlsBlock {
+  display: flex;
+  flex-direction: row;
+}
+.headerText {
+  margin: 0 0.5em;
+  font-size: 48px;
+  font-weight: 600;
 }
 .row {
   display: flex;
