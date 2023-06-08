@@ -9,6 +9,7 @@ type Props = {
   setGuess: (a: string[]) => void;
   cursorIndex: number;
   setCursorIndex: (a: number) => void;
+  onEnter: () => void;
 };
 
 export function handleKeyInput(
@@ -18,6 +19,7 @@ export function handleKeyInput(
   setGuess: (a: string[]) => void,
   cursorIndex: number,
   setCursorIndex: (a: number) => void,
+  onEnter: () => void,
 ) {
   if (key.match(/^[a-zA-Z]$/)) {
     setGuess([
@@ -56,6 +58,9 @@ export function handleKeyInput(
   if (key === "ArrowRight") {
     if (cursorIndex % 5 !== 4) setCursorIndex(cursorIndex + 1);
   }
+  if (key === "Enter") {
+    onEnter();
+  }
 }
 
 export default function Puzzle({
@@ -64,6 +69,7 @@ export default function Puzzle({
   setGuess,
   cursorIndex,
   setCursorIndex,
+  onEnter,
 }: Props) {
   const handleKeydownEvent = useCallback(
     (event: KeyboardEvent) =>
@@ -74,6 +80,7 @@ export default function Puzzle({
         setGuess,
         cursorIndex,
         setCursorIndex,
+        onEnter,
       ),
     [guess, cursorIndex],
   );

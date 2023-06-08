@@ -25,8 +25,6 @@ type Props = {
 };
 
 function PuzzlePage({ activePuzzleIndex }: Props) {
-  //console.log("page with index", activePuzzleIndex);
-  //console.log(data[activePuzzleIndex]);
   const [guess, setGuess] = useState<string[]>(
     Array(5 * data[activePuzzleIndex].words.length).fill(" "),
   );
@@ -34,7 +32,6 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
   const [submissions, setSubmissions] = useState<string[][]>([]);
 
   const changePuzzle = (puzzleIndex: number) => {
-    console.log("in change puzzle");
     const priorSubmissions = getProgressFromStorage(puzzleIndex);
     setSubmissions(priorSubmissions);
     if (priorSubmissions.length > 0) {
@@ -51,10 +48,6 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
 
   useEffect(() => changePuzzle(activePuzzleIndex), [activePuzzleIndex]);
 
-  console.log(
-    "import.meeta.env.VITE_API_URL/puzzle",
-    import.meta.env.VITE_API_URL,
-  );
   fetch(`${import.meta.env.VITE_API_URL}/puzzle?puzzle_number=500`).then(
     (response) => response.json().then((data) => console.log(data)),
   );
@@ -68,6 +61,15 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
         setGuess={setGuess}
         cursorIndex={cursorIndex}
         setCursorIndex={setCursorIndex}
+        onEnter={() =>
+          submitGuess(
+            guess.slice(),
+            setGuess,
+            submissions,
+            setSubmissions,
+            activePuzzleIndex,
+          )
+        }
       />
 
       <Keyboard
@@ -196,7 +198,6 @@ function getCorrectLettersFromGuess(
   guess: string[],
   activePuzzleIndex: number,
 ) {
-  console.log("in getCorrect", data[activePuzzleIndex])
   return guess.map((letter, index) => {
     const wordIndex = Math.floor(index / 5);
     const sourceLetter = data[activePuzzleIndex].words[wordIndex][index % 5];
