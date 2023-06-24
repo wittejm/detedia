@@ -12,6 +12,7 @@ export default function Maker() {
   return (
     <div>
       <h3>Puzzle Maker</h3>
+      This feature is a work in progress and doesn't do anything yet.
       <Grid
         container
         direction="row"
