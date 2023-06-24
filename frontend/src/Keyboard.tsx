@@ -52,6 +52,7 @@ export default function Keyboard({
                   setGuess,
                   cursorIndex,
                   setCursorIndex,
+                  ()=>null
                 )
               }
             >
@@ -99,7 +100,8 @@ function KeyButton({
           setGuess,
           cursorIndex,
           setCursorIndex,
-        )
+          ()=>null
+          )
       }
     >
       <span
