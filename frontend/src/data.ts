@@ -1,4 +1,11 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 801, words: ["story", "creed", "carer", "caper"] },
+  { puzzleNumber: 800, words: ["based", "enter", "tripe", "write"] },
+  { puzzleNumber: 799, words: ["shout", "pence", "peace"] },
+  { puzzleNumber: 798, words: ["moody", "prone", "abort","scour","choir"] },
+  { puzzleNumber: 797, words: ["habit", "plage", "cream", "ocean"] },
+  { puzzleNumber: 796, words: ["prude", "cards", "wordy"] },
+  { puzzleNumber: 795, words: ["weird", "feral", "merge", "verve"] },
   { puzzleNumber: 794, words: ["erupt", "penis", "spice"] },
   { puzzleNumber: 793, words: ["buyer", "beads", "beach"] },
   { puzzleNumber: 792, words: ["esses", "space", "wrest", "blest", "quest"] },
