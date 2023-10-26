@@ -2,7 +2,7 @@ const data: { puzzleNumber: number; words: string[] }[] = [
   
   { puzzleNumber: 858, words: ["snore", "heart","petri", "retry"] },
   { puzzleNumber: 857, words: ["still", "rouse","cause"] },
-  { puzzleNumber: 856, words: ["minds", "nice","wizen", "vixen", "liven", "given"] },
+  { puzzleNumber: 856, words: ["minds", "nicer","wizen", "vixen", "liven", "given"] },
   { puzzleNumber: 855, words: ["smack", "smirk"] },
   { puzzleNumber: 854, words: ["stack", "chore","occur"] },
   { puzzleNumber: 853, words: ["trail", "splat"] },
