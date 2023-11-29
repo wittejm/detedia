@@ -1,4 +1,15 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 891, words: ["churl", "scene", "scope"] },
+  { puzzleNumber: 890, words: ["wharf", "sweat", "trawl", "tawny"] },
+  { puzzleNumber: 889, words: ["glass", "grime", "guide"] },
+  { puzzleNumber: 888, words: ["butty", "thigh", "thorn", "throw"] },
+  {
+    puzzleNumber: 887,
+    words: ["hefts", "evade", "creep", "gleek", "uneeq", "queen"],
+  },
+  { puzzleNumber: 886, words: ["hafts", "wordy", "bleep", "cupel", "pixel"] },
+  { puzzleNumber: 885, words: ["bough", "dross", "ocean", "paino"] },
+  { puzzleNumber: 884, words: ["crank", "canon", "canal", "canes", "candy"] },
   { puzzleNumber: 883, words: ["games", "crone", "elude", "quete", "queue"] },
   { puzzleNumber: 882, words: ["zebra", "doily", "chins", "thing", "think"] },
   { puzzleNumber: 881, words: ["cysts", "turfy", "tarry", "tardy"] },
@@ -7,7 +18,10 @@ const data: { puzzleNumber: number; words: string[] }[] = [
     puzzleNumber: 879,
     words: ["loins", "sired", "sissy", "situp", "sixth", "sight"],
   },
-  { puzzleNumber: 878, words: ["budge", "roils", "stack", "savvy", "sappy", "sassy"] },
+  {
+    puzzleNumber: 878,
+    words: ["budge", "roils", "stack", "savvy", "sappy", "sassy"],
+  },
   { puzzleNumber: 877, words: ["leant", "snide", "green"] },
   { puzzleNumber: 876, words: ["alive", "arson", "abhor", "actor"] },
   { puzzleNumber: 875, words: ["grime", "essay", "seats", "leash"] },
