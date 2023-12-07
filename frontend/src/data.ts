@@ -1,4 +1,11 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 900, words: ["liked", "worst", "woman"] },
+  { puzzleNumber: 900, words: ["loose", "worth", "mound", "young"] },
+  { puzzleNumber: 900, words: ["scars", "plate", "adapt"] },
+  { puzzleNumber: 900, words: ["fluke", "sense", "genie", "genre"] },
+  { puzzleNumber: 900, words: ["bench", "enter", "toned", "taken"] },
+  { puzzleNumber: 900, words: ["panic", "until", "resin"] },
+  { puzzleNumber: 900, words: ["tight", "mochi", "sushi"] },
   { puzzleNumber: 891, words: ["churl", "scene", "scope"] },
   { puzzleNumber: 890, words: ["wharf", "sweat", "trawl", "tawny"] },
   { puzzleNumber: 889, words: ["glass", "grime", "guide"] },
