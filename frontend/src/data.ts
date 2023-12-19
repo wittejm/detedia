@@ -1,4 +1,10 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 912, words: ["angst", "mince", "donor", "bunny", "funny"] },
+  { puzzleNumber: 911, words: ["hawks", "badge", "banal", "baron", "baton", "bacon"] },
+  { puzzleNumber: 910, words: ["blows", "globe"] },
+  { puzzleNumber: 909, words: ["harks", "beige", "ditto", "tonic", "toxic", "topic"] },
+  { puzzleNumber: 908, words: ["crans", "quiet", "would"] },
+  { puzzleNumber: 907, words: ["eisel", "sends", "snore", "stean", "spent"] },
   { puzzleNumber: 906, words: ["acute", "store", "istle", "these"] },
   { puzzleNumber: 905, words: ["stars", "mushy", "plush", "house"] },
   { puzzleNumber: 904, words: ["wants", "knack", "chain"] },
