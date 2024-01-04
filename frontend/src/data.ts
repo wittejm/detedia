@@ -1,4 +1,16 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 930, words: ["blown", "sandy", "stank", "scant"] },
+  { puzzleNumber: 929, words: ["thunk", "tryst", "tired", "twirl"] },
+  { puzzleNumber: 928, words: ["sever", "monad", "blank", "fauna", "aging"] },
+  { puzzleNumber: 927, words: ["plied", "loafs", "trail", "ravel", "mural"] },
+  { puzzleNumber: 926, words: ["witch", "tears", "stoat", "satin", "sault","salty"] },
+  { puzzleNumber: 925, words: ["cloth", "third", "three"] },
+  { puzzleNumber: 924, words: ["whelp", "child"] },
+  { puzzleNumber: 922, words: ["shalt", "clade", "leary", "learn"] },
+  {
+    puzzleNumber: 921,
+    words: ["which", "brink", "toils", "spied", "daisy"],
+  },
   { puzzleNumber: 920, words: ["fauna", "stonk", "prong", "phone"] },
   { puzzleNumber: 919, words: ["hardy", "boils", "canoe", "outie", "elope", "evoke"] },
   { puzzleNumber: 918, words: ["hides", "pleat", "beany", "frame", "crave", "grace"] },
