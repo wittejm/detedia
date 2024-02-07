@@ -48,10 +48,6 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
 
   useEffect(() => changePuzzle(activePuzzleIndex), [activePuzzleIndex]);
 
-  fetch(`${import.meta.env.VITE_API_URL}/puzzle?puzzle_number=500`).then(
-    (response) => response.json().then((data) => console.log(data)),
-  );
-
   return (
     <div className="DetediaPage">
       <HeaderControls activePuzzleIndex={activePuzzleIndex} />
@@ -103,6 +99,7 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
       />
       <button
         onClick={() => {
+          setGuess(Array(5 * data[activePuzzleIndex].words.length).fill(" "))
           clearGuesses(activePuzzleIndex);
           setSubmissions([]);
         }}
