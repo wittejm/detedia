@@ -1,4 +1,5 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 964, words: ["final", "heals", "leaps", "place"] },
   { puzzleNumber: 963, words: ["excel", "rated", "after"] },
   { puzzleNumber: 962, words: ["mirth", "swish", "which"] },
   { puzzleNumber: 961, words: ["fours", "ready", "retch", "rerig", "repel"] },
