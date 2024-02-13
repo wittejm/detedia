@@ -1,4 +1,9 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 969, words: ["drain", "savor", "seral", "strap", "scrag", "scram"] },
+  { puzzleNumber: 968, words: ["tired", "blast", "stoma", "pasta"] },
+  { puzzleNumber: 967, words: ["steak", "piler", "owner", "never"] },
+  { puzzleNumber: 966, words: ["crypt", "drole", "bride", "fried"] },
+  { puzzleNumber: 965, words: ["bloom", "exist", "sting", "stiff"] },
   { puzzleNumber: 964, words: ["final", "heals", "leaps", "place"] },
   { puzzleNumber: 963, words: ["excel", "rated", "after"] },
   { puzzleNumber: 962, words: ["mirth", "swish", "which"] },
