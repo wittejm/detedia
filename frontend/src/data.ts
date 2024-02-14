@@ -1,5 +1,8 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
-  { puzzleNumber: 969, words: ["drain", "savor", "seral", "strap", "scrag", "scram"] },
+  {
+    puzzleNumber: 969,
+    words: ["drain", "savor", "seral", "strap", "scrag", "scram"],
+  },
   { puzzleNumber: 968, words: ["tired", "blast", "stoma", "pasta"] },
   { puzzleNumber: 967, words: ["steak", "piler", "owner", "never"] },
   { puzzleNumber: 966, words: ["crypt", "drole", "bride", "fried"] },
@@ -592,6 +595,11 @@ const data: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 482, words: ["mound", "ovary", "grope", "riots", "floor"] },
   { puzzleNumber: 480, words: ["clued", "aback", "mimic", "ionic"] },
   { puzzleNumber: 479, words: ["clots", "ralph", "dally", "valid"] },
+  { puzzleNumber: 5, words: ["scrub", "rinse", "brush", "trash"] },
+  { puzzleNumber: 4, words: ["rusty", "grime", "older", "elder"] },
+  { puzzleNumber: 3, words: ["steer", "route", "track", "trail"] },
+  { puzzleNumber: 2, words: ["offer", "merit", "price", "prize"] },
+  { puzzleNumber: 1, words: ["coach", "racer", "medal", "pedal"] },
 ];
 
 export default data;
