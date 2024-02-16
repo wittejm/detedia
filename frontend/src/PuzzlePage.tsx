@@ -112,7 +112,7 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
 
 export default PuzzlePage;
 
-function getProgressFromStorage(activePuzzleIndex: number) {
+export function getProgressFromStorage(activePuzzleIndex: number) {
   const allSubmissionsString = window.localStorage.getItem(
     `submittedGuesses-${data[activePuzzleIndex].puzzleNumber}`,
   );
