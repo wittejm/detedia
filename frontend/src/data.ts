@@ -595,6 +595,8 @@ const data: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 482, words: ["mound", "ovary", "grope", "riots", "floor"] },
   { puzzleNumber: 480, words: ["clued", "aback", "mimic", "ionic"] },
   { puzzleNumber: 479, words: ["clots", "ralph", "dally", "valid"] },
+
+  { puzzleNumber: 6, words: ["shore", "creek", "river", "water"] },
   { puzzleNumber: 5, words: ["scrub", "rinse", "brush", "trash"] },
   { puzzleNumber: 4, words: ["rusty", "grime", "older", "elder"] },
   { puzzleNumber: 3, words: ["steer", "route", "track", "trail"] },

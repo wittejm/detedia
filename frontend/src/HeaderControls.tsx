@@ -21,7 +21,7 @@ function HeaderControls({ activePuzzleIndex }: Props) {
       <div className="titleBlock">
         <div className="title">Detedia</div>
         <div className="pageButtons">
-          {/*}
+          {/*
           <div className="pageButton">
             <QuestionMark />
           </div>
@@ -87,38 +87,47 @@ function NavButton({ text, onClick }: NavButtonProps) {
 export default HeaderControls;
 
 function numSuperHardModeViolations(activePuzzleIndex: number) {
-  // for each word: for each blank, check that subsequent words do not contain that letter. UNLESS there's yellow shit going on.
-  let numViolations = 0;
+  // for each previous word and subsequent word, and for each letter in the subsequent word,
+  // consider whether that letter is a violation of yellows or grays.
+  // It's a violation of yellow if it's the same letter as the letter at that index in the previous word.
+  // It's a violation of gray if:
+  //   - there is at least one gray of this letter in the previous word
+  //   - AND the number of this letter in the previous word exceeds
+  //         the number of yellows and greens of the letter in the previous word.
   const sourceWords = data[activePuzzleIndex].words;
   const trueWord = sourceWords[sourceWords.length - 1];
+  const puzzleLettersLength = 5 * data[activePuzzleIndex].words.length;
+  const isAViolationFlags: number[] = Array(puzzleLettersLength).fill(0);
   sourceWords.forEach((previousWord, previousIndex) => {
-    sourceWords.slice(previousIndex + 1).forEach((subsequentWord) => {
-      const byg = computeByg(previousWord, trueWord);
-      byg.forEach((c, ind) => {
-        const indicesInPreviousWordOfThisLetter = previousWord
-          .split("")
-          .reduce((soFar, current, currInd) => {
-            if (current === previousWord[ind]) soFar.push(currInd);
-            return soFar;
-          }, [] as number[]);
-        const numYellowOrGreenOfThisLetterInPreviousWord =
-          indicesInPreviousWordOfThisLetter.filter(
-            (ind) => byg[ind] === "yellow" || byg[ind] === "green",
-          ).length;
-        const foundARepeat =
-          (c === "yellow" && previousWord[ind] === subsequentWord[ind]) ||
-          (c === "gray" &&
-            (numYellowOrGreenOfThisLetterInPreviousWord <
-              (subsequentWord.match(new RegExp(previousWord[ind], "g")) || [])
-                .length ||
-              previousWord[ind] === subsequentWord[ind]));
-        if (foundARepeat) {
-          numViolations++;
-        }
+    sourceWords
+      .slice(previousIndex + 1)
+      .forEach((subsequentWord, subsequentIndex) => {
+        const previousWordByg = computeByg(previousWord, trueWord);
+        subsequentWord.split("").forEach((letter, index) => {
+          if (
+            previousWordByg[index] === "yellow" &&
+            letter === previousWord[index]
+          ) {
+            isAViolationFlags[5 * subsequentIndex + index] = 1;
+          }
+          const thisLetterWasPreviouslyGreenAtThisIndex = letter === previousWord[index] && previousWordByg[index]==="green";
+          const thisLetterWasGrayInPreviousWord =
+            previousWordByg.filter(
+              (bygValue, bygIndex) =>
+                bygValue === "gray" && letter === previousWord[bygIndex],
+            ).length > 0;
+          const countOfThisLetterInSubsequentWord = subsequentWord.split("").filter((subsequentWordLetter)=>subsequentWordLetter===letter).length;
+          const countOfYellowAndGreenInByg = previousWordByg.filter((value, bygIndex)=>previousWord[bygIndex] === letter && (value === "green" || value ==="yellow")).length
+          if(!thisLetterWasPreviouslyGreenAtThisIndex && thisLetterWasGrayInPreviousWord && countOfThisLetterInSubsequentWord > countOfYellowAndGreenInByg){
+            isAViolationFlags[5 * (previousIndex + subsequentIndex+1) + index] = 1;
+          }
+        });
       });
-    });
   });
+  console.log("isAViolationFlags", isAViolationFlags)
+  const numViolations = isAViolationFlags.reduce((sum, next) => sum + next);
   return numViolations;
+
 }
 
 function findFirstUnsolvedPuzzleAfterSolvedPuzzles() {
