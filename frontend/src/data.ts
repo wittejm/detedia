@@ -1,4 +1,10 @@
 const data: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 975, words: ["extra", "rodeo", "peril", "price"] },
+  { puzzleNumber: 974, words: ["punks", "where", "cadre", "ridge"] },
+  { puzzleNumber: 973, words: ["dream", "spasm", "psalm"] },
+  { puzzleNumber: 972, words: ["proxy", "stale", "stand", "staff", "stabs", "stash"] },
+  { puzzleNumber: 971, words: ["drain", "apply", "aches", "ascot"] },
+  { puzzleNumber: 970, words: ["frisk", "meant", "natch", "panty", "talon"] },
   {
     puzzleNumber: 969,
     words: ["drain", "savor", "seral", "strap", "scrag", "scram"],
