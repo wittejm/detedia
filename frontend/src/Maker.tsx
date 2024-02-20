@@ -20,28 +20,7 @@ export default function Maker() {
         alignItems="center"
         justifyContent="flex-end"
       >
-        <Grid item xs={6} display="flex" justifyContent="flex-end">
-          <Item>
-            Tag:
-            <Tooltip
-              title={
-                <Typography fontSize={16}>
-                  {" "}
-                  This is used for the puzzle's URL. Alphanumeric or hyphen
-                  characters only.
-                </Typography>
-              }
-            >
-              <QuestionMark fontSize={"inherit"} />
-            </Tooltip>
-          </Item>
-        </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-start">
-          <Item>
-            <TextField id="tagField" label="" variant="outlined" value={tagValue} onChange={(e)=>setTagValue(e.target.value)} />
-          </Item>
-        </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-end">
+        <Grid item xs={4} display="flex" justifyContent="flex-end">
           <Item>
             Name:
             <Tooltip
@@ -56,12 +35,12 @@ export default function Maker() {
             </Tooltip>
           </Item>
         </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-start">
+        <Grid item xs={8} display="flex" justifyContent="flex-start">
           <Item>
             <TextField id="nameField" label="" variant="outlined" value={nameValue} onChange={(e)=>setNameValue(e.target.value)} />
           </Item>
         </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-end">
+        <Grid item xs={4} display="flex" justifyContent="flex-end">
           <Item>
             Words:
             <Tooltip
@@ -77,13 +56,13 @@ export default function Maker() {
             </Tooltip>
           </Item>
         </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-start">
+        <Grid item xs={8} display="flex" justifyContent="flex-start">
           <Item>
             <TextField id="wordsField" label="" variant="outlined"  value={wordsValue} onChange={(e)=>setWordsValue(e.target.value)}/>
           </Item>
         </Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-end"></Grid>
-        <Grid item xs={6} display="flex" justifyContent="flex-start">
+        <Grid item xs={4} display="flex" justifyContent="flex-end"></Grid>
+        <Grid item xs={8} display="flex" justifyContent="flex-start">
           <Item>
             <Button size="large" variant="contained" onClick={()=>0}>Create!</Button>
           </Item>
