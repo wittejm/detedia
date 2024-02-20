@@ -11,7 +11,6 @@ export default function PuzzleLoader() {
     return <HashedPuzzlePage puzzleHash={puzzleId}/>
   }
   const closestMatchingPuzzleNumber = getClosestMatchingPuzzleNumber(puzzleNumber);
-  console.log("closestMatchingPuzzleNumber", closestMatchingPuzzleNumber)
   if (puzzleNumber === closestMatchingPuzzleNumber) {
     const activePuzzleIndex = data.findIndex((element)=>element.puzzleNumber===puzzleNumber)
     return <PuzzlePage activePuzzleIndex={activePuzzleIndex}/>;
@@ -23,7 +22,6 @@ export default function PuzzleLoader() {
 function getClosestMatchingPuzzleNumber(puzzleNumber: number) {
   const puzzleIndices: number[] = data.map((entry) => entry.puzzleNumber);
   puzzleIndices.sort((a,b)=>a-b)
-  console.log(puzzleIndices)
   return (
     puzzleIndices.filter((val) => val >= puzzleNumber)[0] || puzzleIndices.pop()
   );

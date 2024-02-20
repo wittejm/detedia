@@ -44,12 +44,6 @@ function HeaderControls({ activePuzzleIndex }: Props) {
         <NavButton
           text="<"
           onClick={() => {
-            console.log(
-              `/${
-                data[Math.min(data.length - 1, activePuzzleIndex + 1)]
-                  .puzzleNumber
-              }`,
-            );
             navigate(
               `/${
                 data[Math.min(data.length - 1, activePuzzleIndex + 1)]
@@ -64,13 +58,11 @@ function HeaderControls({ activePuzzleIndex }: Props) {
         </div>
         <NavButton
           text=">"
-          onClick={() =>
-            {
-              console.log(`/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`);
-              navigate(
+          onClick={() => {
+            navigate(
               `/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`,
-            )}
-          }
+            );
+          }}
         />
         <NavButton
           text=">>"
