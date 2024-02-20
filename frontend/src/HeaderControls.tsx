@@ -43,14 +43,20 @@ function HeaderControls({ activePuzzleIndex }: Props) {
         />
         <NavButton
           text="<"
-          onClick={() =>
+          onClick={() => {
+            console.log(
+              `/${
+                data[Math.min(data.length - 1, activePuzzleIndex + 1)]
+                  .puzzleNumber
+              }`,
+            );
             navigate(
               `/${
                 data[Math.min(data.length - 1, activePuzzleIndex + 1)]
                   .puzzleNumber
               }`,
-            )
-          }
+            );
+          }}
         />
         <div className="headerText">
           {data[activePuzzleIndex].puzzleNumber}
@@ -59,9 +65,11 @@ function HeaderControls({ activePuzzleIndex }: Props) {
         <NavButton
           text=">"
           onClick={() =>
-            navigate(
+            {
+              console.log(`/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`);
+              navigate(
               `/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`,
-            )
+            )}
           }
         />
         <NavButton
@@ -110,24 +118,38 @@ function numSuperHardModeViolations(activePuzzleIndex: number) {
           ) {
             isAViolationFlags[5 * subsequentIndex + index] = 1;
           }
-          const thisLetterWasPreviouslyGreenAtThisIndex = letter === previousWord[index] && previousWordByg[index]==="green";
+          const thisLetterWasPreviouslyGreenAtThisIndex =
+            letter === previousWord[index] &&
+            previousWordByg[index] === "green";
           const thisLetterWasGrayInPreviousWord =
             previousWordByg.filter(
               (bygValue, bygIndex) =>
                 bygValue === "gray" && letter === previousWord[bygIndex],
             ).length > 0;
-          const countOfThisLetterInSubsequentWord = subsequentWord.split("").filter((subsequentWordLetter)=>subsequentWordLetter===letter).length;
-          const countOfYellowAndGreenInByg = previousWordByg.filter((value, bygIndex)=>previousWord[bygIndex] === letter && (value === "green" || value ==="yellow")).length
-          if(!thisLetterWasPreviouslyGreenAtThisIndex && thisLetterWasGrayInPreviousWord && countOfThisLetterInSubsequentWord > countOfYellowAndGreenInByg){
-            isAViolationFlags[5 * (previousIndex + subsequentIndex+1) + index] = 1;
+          const countOfThisLetterInSubsequentWord = subsequentWord
+            .split("")
+            .filter(
+              (subsequentWordLetter) => subsequentWordLetter === letter,
+            ).length;
+          const countOfYellowAndGreenInByg = previousWordByg.filter(
+            (value, bygIndex) =>
+              previousWord[bygIndex] === letter &&
+              (value === "green" || value === "yellow"),
+          ).length;
+          if (
+            !thisLetterWasPreviouslyGreenAtThisIndex &&
+            thisLetterWasGrayInPreviousWord &&
+            countOfThisLetterInSubsequentWord > countOfYellowAndGreenInByg
+          ) {
+            isAViolationFlags[
+              5 * (previousIndex + subsequentIndex + 1) + index
+            ] = 1;
           }
         });
       });
   });
-  console.log("isAViolationFlags", isAViolationFlags)
   const numViolations = isAViolationFlags.reduce((sum, next) => sum + next);
   return numViolations;
-
 }
 
 function findFirstUnsolvedPuzzleAfterSolvedPuzzles() {
