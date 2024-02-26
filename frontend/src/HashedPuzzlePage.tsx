@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import data from "./data";
 import HeaderControls from "./HeaderControls";
 import Keyboard from "./Keyboard";
 import Puzzle from "./Puzzle";
