@@ -12,6 +12,9 @@ type Props = {
   setCursorIndex: any;
   usageAllLetters: { [key: string]: string[] };
   submissions: string[][];
+  data: {puzzleNumber: number;
+    words: string[];
+}[]
 };
 
 export default function Keyboard({
@@ -22,6 +25,7 @@ export default function Keyboard({
   setCursorIndex,
   usageAllLetters,
   submissions,
+  data
 }: Props) {
   return (
     <div>
@@ -38,6 +42,7 @@ export default function Keyboard({
               setCursorIndex={setCursorIndex}
               submissions={submissions}
               key={letter}
+              data={data}
             />
           ))}
 
@@ -52,7 +57,8 @@ export default function Keyboard({
                   setGuess,
                   cursorIndex,
                   setCursorIndex,
-                  ()=>null
+                  ()=>null,
+                  data
                 )
               }
             >
@@ -74,6 +80,8 @@ type KeyButtonProps = {
   cursorIndex: number;
   setCursorIndex: any;
   submissions: string[][];
+  data: {puzzleNumber: number;
+    words: string[];}[]
 };
 
 function KeyButton({
@@ -85,6 +93,7 @@ function KeyButton({
   cursorIndex,
   setCursorIndex,
   submissions,
+  data
 }: KeyButtonProps) {
   const width = 40;
   const height = 44;
@@ -100,7 +109,8 @@ function KeyButton({
           setGuess,
           cursorIndex,
           setCursorIndex,
-          ()=>null
+          ()=>null,
+          data
           )
       }
     >

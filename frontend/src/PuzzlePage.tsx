@@ -88,6 +88,7 @@ function PuzzlePage({ activePuzzleIndex, source, data }: Props) {
           data
         )}
         submissions={submissions}
+        data={data}
       />
       <button
         onClick={() =>
