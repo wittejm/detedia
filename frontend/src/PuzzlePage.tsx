@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import data from "./data";
 import HeaderControls from "./HeaderControls";
 import Keyboard from "./Keyboard";
 import Puzzle from "./Puzzle";
@@ -12,19 +11,23 @@ function submitGuess(
   submissions: string[][],
   setSubmissions: any,
   activePuzzleIndex: number,
+  source: string,
+  data: { puzzleNumber: number, words: string[] }[]
 ) {
   const newSubmissions = [guess, ...submissions];
-  saveGuesses(activePuzzleIndex, newSubmissions);
+  saveGuesses(activePuzzleIndex, newSubmissions, source, data);
   setSubmissions(newSubmissions);
-  const correctLetters = getCorrectLettersFromGuess(guess, activePuzzleIndex);
+  const correctLetters = getCorrectLettersFromGuess(guess, activePuzzleIndex, data);
   setGuess(correctLetters);
 }
 
 type Props = {
   activePuzzleIndex: number;
+  source: string;
+  data: { puzzleNumber: number, words: string[] }[]
 };
 
-function PuzzlePage({ activePuzzleIndex }: Props) {
+function PuzzlePage({ activePuzzleIndex, source, data }: Props) {
   const [guess, setGuess] = useState<string[]>(
     Array(5 * data[activePuzzleIndex].words.length).fill(" "),
   );
@@ -32,12 +35,13 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
   const [submissions, setSubmissions] = useState<string[][]>([]);
 
   const changePuzzle = (puzzleIndex: number) => {
-    const priorSubmissions = getProgressFromStorage(puzzleIndex);
+    const priorSubmissions = getProgressFromStorage(puzzleIndex, source, data);
     setSubmissions(priorSubmissions);
     if (priorSubmissions.length > 0) {
       const correctLetters = getCorrectLettersFromGuess(
         priorSubmissions[0],
         puzzleIndex,
+        data
       );
       setGuess(correctLetters);
     } else {
@@ -50,7 +54,7 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
 
   return (
     <div className="DetediaPage">
-      <HeaderControls activePuzzleIndex={activePuzzleIndex} />
+      <HeaderControls activePuzzleIndex={activePuzzleIndex} source={source} data={data} />
       <Puzzle
         activePuzzleIndex={activePuzzleIndex}
         guess={guess}
@@ -64,8 +68,11 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
             submissions,
             setSubmissions,
             activePuzzleIndex,
+            source, 
+            data
           )
         }
+        data={data}
       />
 
       <Keyboard
@@ -77,6 +84,8 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
         usageAllLetters={getUsageFromSubmissions(
           activePuzzleIndex,
           submissions,
+          source,
+          data
         )}
         submissions={submissions}
       />
@@ -88,6 +97,8 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
             submissions,
             setSubmissions,
             activePuzzleIndex,
+            source,
+            data
           )
         }
       >
@@ -96,11 +107,12 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
       <Submissions
         submissions={submissions}
         activePuzzleIndex={activePuzzleIndex}
+        data={data}
       />
       <button
         onClick={() => {
           setGuess(Array(5 * data[activePuzzleIndex].words.length).fill(" "))
-          clearGuesses(activePuzzleIndex);
+          clearGuesses(activePuzzleIndex, source, data);
           setSubmissions([]);
         }}
       >
@@ -112,9 +124,9 @@ function PuzzlePage({ activePuzzleIndex }: Props) {
 
 export default PuzzlePage;
 
-export function getProgressFromStorage(activePuzzleIndex: number) {
+export function getProgressFromStorage(activePuzzleIndex: number, source: string, data: { puzzleNumber: number, words: string[] }[]) {
   const allSubmissionsString = window.localStorage.getItem(
-    `submittedGuesses-${data[activePuzzleIndex].puzzleNumber}`,
+    `submittedGuesses-${source==="poems" ? "poems-" : ""}${data[activePuzzleIndex].puzzleNumber}`,
   );
   const res =
     allSubmissionsString &&
@@ -122,26 +134,28 @@ export function getProgressFromStorage(activePuzzleIndex: number) {
   return res || [];
 }
 
-function saveGuesses(activePuzzleIndex: number, allSubmissions: string[][]) {
+function saveGuesses(activePuzzleIndex: number, allSubmissions: string[][], source: string, data: { puzzleNumber: number, words: string[] }[]) {
   const allSubmissionsString = allSubmissions
     .map((guessSet) => guessSet.join(""))
     .join(":");
   window.localStorage.setItem(
-    `submittedGuesses-${data[activePuzzleIndex].puzzleNumber}`,
+    `submittedGuesses-${source==="poems" ? "poems-" : ""}${data[activePuzzleIndex].puzzleNumber}`,
     allSubmissionsString,
   );
 }
-function clearGuesses(activePuzzleIndex: number) {
+function clearGuesses(activePuzzleIndex: number, source: string, data: { puzzleNumber: number, words: string[] }[]) {
   window.localStorage.setItem(
-    `submittedGuesses-${data[activePuzzleIndex].puzzleNumber}`,
+    `submittedGuesses-${source==="poems" ? "poems-" : ""}${data[activePuzzleIndex].puzzleNumber}`,
     "",
   );
-  getProgressFromStorage(activePuzzleIndex);
+  getProgressFromStorage(activePuzzleIndex, source, data);
 }
 
 function getUsageFromSubmissions(
   activePuzzleIndex: number,
   submissions: string[][],
+  source: string,
+  data: { puzzleNumber: number, words: string[] }[]
 ) {
   const letters = "QWERTYUIOPASDFGHJKLZXCVBNM";
   const res = letters
@@ -156,6 +170,7 @@ function getUsageFromSubmissions(
               activePuzzleIndex,
               submissions,
               wordIndex,
+              data
             ),
           )),
         acc
@@ -170,6 +185,7 @@ function getKeyColorFromSubmissions(
   activePuzzleIndex: number,
   submissions: string[][],
   wordIndex: number,
+  data: { puzzleNumber: number, words: string[] }[]
 ) {
   let color = "white";
   const sourceWord = data[activePuzzleIndex].words[wordIndex].toUpperCase();
@@ -194,6 +210,7 @@ function getKeyColorFromSubmissions(
 function getCorrectLettersFromGuess(
   guess: string[],
   activePuzzleIndex: number,
+  data:  { puzzleNumber: number, words: string[] }[]
 ) {
   return guess.map((letter, index) => {
     const wordIndex = Math.floor(index / 5);

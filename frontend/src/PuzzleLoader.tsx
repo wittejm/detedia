@@ -1,25 +1,30 @@
 import React from "react";
-import { Navigate, useParams } from "react-router-dom";
-import data from "./data";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {wordle, poems} from "./data";
 import HashedPuzzlePage from "./HashedPuzzlePage";
 import PuzzlePage from "./PuzzlePage";
 
-export default function PuzzleLoader() {
+type Props = {
+  source: string
+}
+export default function PuzzleLoader({source} : Props) {
+  const data = source==="wordle"? wordle : poems
   const { puzzleId } = useParams<{ puzzleId: string }>();
   const puzzleNumber = parseInt(puzzleId || "");
   if (!puzzleNumber) {
     return <HashedPuzzlePage puzzleHash={puzzleId}/>
   }
-  const closestMatchingPuzzleNumber = getClosestMatchingPuzzleNumber(puzzleNumber);
+  const closestMatchingPuzzleNumber = getClosestMatchingPuzzleNumber(puzzleNumber, data);
   if (puzzleNumber === closestMatchingPuzzleNumber) {
     const activePuzzleIndex = data.findIndex((element)=>element.puzzleNumber===puzzleNumber)
-    return <PuzzlePage activePuzzleIndex={activePuzzleIndex}/>;
+    return <PuzzlePage activePuzzleIndex={activePuzzleIndex} source={source} data={data}/>;
   } else {
-    return <Navigate replace to={`/${closestMatchingPuzzleNumber}`} />;
+    console.log(source);
+    return <Navigate replace to={`/${source}/${closestMatchingPuzzleNumber}`} />;
   }
 }
 
-function getClosestMatchingPuzzleNumber(puzzleNumber: number) {
+function getClosestMatchingPuzzleNumber(puzzleNumber: number, data: any[]) {
   const puzzleIndices: number[] = data.map((entry) => entry.puzzleNumber);
   puzzleIndices.sort((a,b)=>a-b)
   return (

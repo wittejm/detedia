@@ -1,20 +1,23 @@
 import {
+  Comment,
   Construction,
+  ContactMail,
   FormatListBulleted,
   QuestionMark,
 } from "@mui/icons-material";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, Tooltip } from "@mui/material";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import data from "./data";
 import { computeByg } from "./Puzzle";
 import { getProgressFromStorage } from "./PuzzlePage";
 
 type Props = {
   activePuzzleIndex: number;
+  source: string;
+  data: { puzzleNumber: number; words: string[] }[];
 };
 
-function HeaderControls({ activePuzzleIndex }: Props) {
+function HeaderControls({ activePuzzleIndex, source, data }: Props) {
   const navigate = useNavigate();
   return (
     <div className="headerBlock">
@@ -28,24 +31,33 @@ function HeaderControls({ activePuzzleIndex }: Props) {
           <div className="pageButton">
             <FormatListBulleted />
           </div>
-          */}
           <div className="pageButton">
             <Button component={Link} to="/maker">
               <Construction />{" "}
             </Button>
+          </div>
+          */}
+          <div className="pageButton">
+            <Tooltip title="Email: wittejm@gmail.com">
+              <Button href="mailto:wittejm@gmail.com">
+                <Comment />{" "}
+              </Button>
+            </Tooltip>
           </div>
         </div>
       </div>
       <div className="headerControlsBlock">
         <NavButton
           text="<<"
-          onClick={() => navigate(`/${data[data.length - 1].puzzleNumber}`)}
+          onClick={() =>
+            navigate(`/${source}/${data[data.length - 1].puzzleNumber}`)
+          }
         />
         <NavButton
           text="<"
           onClick={() => {
             navigate(
-              `/${
+              `/${source}/${
                 data[Math.min(data.length - 1, activePuzzleIndex + 1)]
                   .puzzleNumber
               }`,
@@ -54,19 +66,21 @@ function HeaderControls({ activePuzzleIndex }: Props) {
         />
         <div className="headerText">
           {data[activePuzzleIndex].puzzleNumber}
-          {"!".repeat(numSuperHardModeViolations(activePuzzleIndex))}
+          {"!".repeat(numSuperHardModeViolations(activePuzzleIndex, data))}
         </div>
         <NavButton
           text=">"
           onClick={() => {
             navigate(
-              `/${data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber}`,
+              `/${source}/${
+                data[Math.max(0, activePuzzleIndex - 1)].puzzleNumber
+              }`,
             );
           }}
         />
         <NavButton
           text=">>"
-          onClick={() => navigate(`/${data[0].puzzleNumber}`)}
+          onClick={() => navigate(`/${source}/${data[0].puzzleNumber}`)}
         />
       </div>
     </div>
@@ -86,7 +100,10 @@ function NavButton({ text, onClick }: NavButtonProps) {
 }
 export default HeaderControls;
 
-function numSuperHardModeViolations(activePuzzleIndex: number) {
+function numSuperHardModeViolations(
+  activePuzzleIndex: number,
+  data: { puzzleNumber: number; words: string[] }[],
+) {
   // for each previous word and subsequent word, and for each letter in the subsequent word,
   // consider whether that letter is a violation of yellows or grays.
   // It's a violation of yellow if it's the same letter as the letter at that index in the previous word.
@@ -98,10 +115,10 @@ function numSuperHardModeViolations(activePuzzleIndex: number) {
   const trueWord = sourceWords[sourceWords.length - 1];
   const puzzleLettersLength = 5 * data[activePuzzleIndex].words.length;
   const isAViolationFlags: number[] = Array(puzzleLettersLength).fill(0);
-  sourceWords.forEach((previousWord, previousIndex) => {
+  sourceWords.forEach((previousWord: string, previousIndex: number) => {
     sourceWords
       .slice(previousIndex + 1)
-      .forEach((subsequentWord, subsequentIndex) => {
+      .forEach((subsequentWord: string, subsequentIndex: number) => {
         const previousWordByg = computeByg(previousWord, trueWord);
         subsequentWord.split("").forEach((letter, index) => {
           if (
@@ -144,9 +161,11 @@ function numSuperHardModeViolations(activePuzzleIndex: number) {
   return numViolations;
 }
 
-function findFirstUnsolvedPuzzleAfterSolvedPuzzles() {
+/*
+function findFirstUnsolvedPuzzleAfterSolvedPuzzles(data: { puzzleNumber: number, words: string[] }[]) {
   for (let i = 0; i < data.length; i++) {
     const progress = getProgressFromStorage(i);
     break;
   }
 }
+*/

@@ -1,13 +1,13 @@
 import React from "react";
-import data from "./data";
 import { computeByg } from "./Puzzle";
 import valid from "./valid";
 
 type Props = {
   submissions: string[][];
   activePuzzleIndex: number;
+  data: { puzzleNumber: number, words: string[] }[]
 };
-export default function Submissions({ submissions, activePuzzleIndex }: Props) {
+export default function Submissions({ submissions, activePuzzleIndex, data }: Props) {
   return (
     <div>
       {submissions.map((submission, index) => (
@@ -15,6 +15,7 @@ export default function Submissions({ submissions, activePuzzleIndex }: Props) {
           key={index}
           activePuzzleIndex={activePuzzleIndex}
           submission={submission}
+          data={data}
         />
       ))}
     </div>
@@ -24,9 +25,10 @@ export default function Submissions({ submissions, activePuzzleIndex }: Props) {
 type SubmissionProps = {
   submission: string[];
   activePuzzleIndex: number;
+  data: { puzzleNumber: number, words: string[] }[]
 };
 
-function Submission({ submission, activePuzzleIndex }: SubmissionProps) {
+function Submission({ submission, activePuzzleIndex, data }: SubmissionProps) {
   return (
     <div className="submission">
       {Array(data[activePuzzleIndex].words.length)
@@ -37,6 +39,7 @@ function Submission({ submission, activePuzzleIndex }: SubmissionProps) {
             guess={submission.slice(5 * index, 5 * (index + 1))}
             wordIndex={index}
             key={index}
+            data={data}
           />
         ))}
     </div>
@@ -46,12 +49,14 @@ type SubmissionRowProps = {
   activePuzzleIndex: number;
   guess: string[];
   wordIndex: number;
+  data: { puzzleNumber: number, words: string[] }[]
 };
 
 function SubmissionRow({
   guess,
   wordIndex,
   activePuzzleIndex,
+  data
 }: SubmissionRowProps) {
   const guessByg = computeByg(
     guess.join("").toLowerCase(),

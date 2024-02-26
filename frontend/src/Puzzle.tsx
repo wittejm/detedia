@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
-import data from "./data";
+import React, { useCallback, useEffect } from "react";
 import PuzzleRow from "./PuzzleRow";
 import valid from "./valid";
 
@@ -10,6 +9,7 @@ type Props = {
   cursorIndex: number;
   setCursorIndex: (a: number) => void;
   onEnter: () => void;
+  data: { puzzleNumber: number, words: string[] }[];
 };
 
 export function handleKeyInput(
@@ -20,6 +20,7 @@ export function handleKeyInput(
   cursorIndex: number,
   setCursorIndex: (a: number) => void,
   onEnter: () => void,
+  data: { puzzleNumber: number, words: string[] }[]
 ) {
   if (key.match(/^[a-zA-Z]$/)) {
     setGuess([
@@ -70,6 +71,7 @@ export default function Puzzle({
   cursorIndex,
   setCursorIndex,
   onEnter,
+  data
 }: Props) {
   const handleKeydownEvent = useCallback(
     (event: KeyboardEvent) =>
@@ -81,6 +83,7 @@ export default function Puzzle({
         cursorIndex,
         setCursorIndex,
         onEnter,
+        data
       ),
     [guess, cursorIndex],
   );
@@ -96,7 +99,7 @@ export default function Puzzle({
 
   return (
     <div>
-      {source.map((sourceWord, sourceWordIndex) => {
+      {source.map((sourceWord: string, sourceWordIndex:number) => {
         return (
           <PuzzleRow
             byg={computeByg(sourceWord, source[source.length - 1])}

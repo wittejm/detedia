@@ -1,4 +1,4 @@
-const data: { puzzleNumber: number; words: string[] }[] = [
+export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 975, words: ["extra", "rodeo", "peril", "price"] },
   { puzzleNumber: 974, words: ["punks", "where", "cadre", "ridge"] },
   { puzzleNumber: 973, words: ["dream", "spasm", "psalm"] },
@@ -601,6 +601,8 @@ const data: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 482, words: ["mound", "ovary", "grope", "riots", "floor"] },
   { puzzleNumber: 480, words: ["clued", "aback", "mimic", "ionic"] },
   { puzzleNumber: 479, words: ["clots", "ralph", "dally", "valid"] },
+]
+export const poems = [
   { puzzleNumber: 6, words: ["shore", "creek", "river", "water"] },
   { puzzleNumber: 5, words: ["scrub", "rinse", "brush", "trash"] },
   { puzzleNumber: 4, words: ["rusty", "grime", "older", "elder"] },
@@ -609,4 +611,3 @@ const data: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 1, words: ["coach", "racer", "medal", "pedal"] },
 ];
 
-export default data;
