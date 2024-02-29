@@ -4,7 +4,10 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 983, words: ["fried", "eaten", "sense"] },
   { puzzleNumber: 982, words: ["venal", "noone", "onery", "often"] },
   { puzzleNumber: 981, words: ["gauge", "costs", "sixth", "smith"] },
-  { puzzleNumber: 980, words: ["storm", "rainy", "fired", "giver", "biker", "wiper", "piper"] },
+  {
+    puzzleNumber: 980,
+    words: ["storm", "rainy", "fired", "giver", "biker", "wiper", "piper"],
+  },
   { puzzleNumber: 979, words: ["trial", "carat", "apart"] },
   { puzzleNumber: 978, words: ["trick", "numbs", "playa", "heavy"] },
   { puzzleNumber: 977, words: ["binds", "braid", "build"] },
@@ -12,7 +15,10 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 975, words: ["extra", "rodeo", "peril", "price"] },
   { puzzleNumber: 974, words: ["punks", "where", "cadre", "ridge"] },
   { puzzleNumber: 973, words: ["dream", "spasm", "psalm"] },
-  { puzzleNumber: 972, words: ["proxy", "stale", "stand", "staff", "stabs", "stash"] },
+  {
+    puzzleNumber: 972,
+    words: ["proxy", "stale", "stand", "staff", "stabs", "stash"],
+  },
   { puzzleNumber: 971, words: ["drain", "apply", "aches", "ascot"] },
   { puzzleNumber: 970, words: ["frisk", "meant", "natch", "panty", "talon"] },
   {
@@ -611,15 +617,38 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 482, words: ["mound", "ovary", "grope", "riots", "floor"] },
   { puzzleNumber: 480, words: ["clued", "aback", "mimic", "ionic"] },
   { puzzleNumber: 479, words: ["clots", "ralph", "dally", "valid"] },
-]
-export const poems = [     
+];
+export const poems = [
+  /*
+  picky teeth snarl growl drool
+  chili lemon salty salad salsa
+  bliss honor truth credo grace
+  nutty silly goofy wacky crazy
+  syrup jelly gummy candy taffy
+  check proof tally audit digit
+  sooth murky relax blare
+  mucus nosey sniff snort snarl
+  juicy mango
+  winch turbo evoke adopt flood
+  decor panel shape frame image
+  curve round whirl twirl swirl
+  happy merry jolly giddy sunny
+  legal theft prove crime bribe
+  audit clock proof probe prove
+  savvy brain guard aware alarm
   { puzzleNumber: 13, words: ["error", "shame", "lapse", "cause"] },
   { puzzleNumber: 12, words: ["vocal", "opera", "radio", "audio"] },
   { puzzleNumber: 11, words: ["mouth", "pique", "sulky", "surly"] },
-  { puzzleNumber: 10, words: ["jelly", "glaze", "cream", "treat"] },
-  { puzzleNumber: 9, words: ["buyer", "merit", "price", "prize"] },
+  
+  */
+
+  { puzzleNumber: 12, words: ["fruit", "cacao", "vodka", "lemon", "spoon"] },
+  { puzzleNumber: 12, words: ["jelly", "glaze", "cream", "treat"] },
+  { puzzleNumber: 11, words: ["motor", "alarm", "drive", "break", "wreck"] },
+  { puzzleNumber: 10, words: ["buyer", "merit", "price", "prize"] },
+  { puzzleNumber: 9, words: ["spell", "funny", "magic", "trick", "witch"] },
   { puzzleNumber: 8, words: ["bless", "mercy", "grace"] },
-  { puzzleNumber: 7, words: ["pitch", "music", "scale"] },
+  { puzzleNumber: 7, words: ["pitch", "lyric", "scale", "clear", "vocal"] },
   { puzzleNumber: 6, words: ["shore", "creek", "river", "water"] },
   { puzzleNumber: 5, words: ["scrub", "rinse", "brush", "trash"] },
   { puzzleNumber: 4, words: ["rusty", "grime", "older", "elder"] },
@@ -627,4 +656,3 @@ export const poems = [
   { puzzleNumber: 2, words: ["offer", "merit", "price", "prize"] },
   { puzzleNumber: 1, words: ["coach", "racer", "medal", "pedal"] },
 ];
-
