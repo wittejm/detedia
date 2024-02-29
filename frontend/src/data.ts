@@ -1,4 +1,14 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 985, words: ["tumor", "blimp", "minds", "image"] },
+  { puzzleNumber: 984, words: ["boost", "plane", "lemur", "gelid", "devil"] },
+  { puzzleNumber: 983, words: ["fried", "eaten", "sense"] },
+  { puzzleNumber: 982, words: ["venal", "noone", "onery", "often"] },
+  { puzzleNumber: 981, words: ["gauge", "costs", "sixth", "smith"] },
+  { puzzleNumber: 980, words: ["storm", "rainy", "fired", "giver", "biker", "wiper", "piper"] },
+  { puzzleNumber: 979, words: ["trial", "carat", "apart"] },
+  { puzzleNumber: 978, words: ["trick", "numbs", "playa", "heavy"] },
+  { puzzleNumber: 977, words: ["binds", "braid", "build"] },
+  { puzzleNumber: 976, words: ["later", "patio", "maths", "match"] },
   { puzzleNumber: 975, words: ["extra", "rodeo", "peril", "price"] },
   { puzzleNumber: 974, words: ["punks", "where", "cadre", "ridge"] },
   { puzzleNumber: 973, words: ["dream", "spasm", "psalm"] },
@@ -602,7 +612,14 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 480, words: ["clued", "aback", "mimic", "ionic"] },
   { puzzleNumber: 479, words: ["clots", "ralph", "dally", "valid"] },
 ]
-export const poems = [
+export const poems = [     
+  { puzzleNumber: 13, words: ["error", "shame", "lapse", "cause"] },
+  { puzzleNumber: 12, words: ["vocal", "opera", "radio", "audio"] },
+  { puzzleNumber: 11, words: ["mouth", "pique", "sulky", "surly"] },
+  { puzzleNumber: 10, words: ["jelly", "glaze", "cream", "treat"] },
+  { puzzleNumber: 9, words: ["buyer", "merit", "price", "prize"] },
+  { puzzleNumber: 8, words: ["bless", "mercy", "grace"] },
+  { puzzleNumber: 7, words: ["pitch", "music", "scale"] },
   { puzzleNumber: 6, words: ["shore", "creek", "river", "water"] },
   { puzzleNumber: 5, words: ["scrub", "rinse", "brush", "trash"] },
   { puzzleNumber: 4, words: ["rusty", "grime", "older", "elder"] },
