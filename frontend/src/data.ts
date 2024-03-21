@@ -1,4 +1,27 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 1005, words: ["bleak", "teary", "shame", "shade"] },
+  { puzzleNumber: 1004, words: ["forte", "pylon", "lions", "lingo"] },
+  { puzzleNumber: 1003, words: ["munge", "space", "lathe", "abide"] },
+  { puzzleNumber: 1002, words: ["chirp", "plane", "yelps", "spelt"] },
+  { puzzleNumber: 1001, words: ["adopt", "toity", "tonic", "toxin"] },
+  { puzzleNumber: 1000, words: ["funky", "crust", "erupt"] },
+  { puzzleNumber: 999, words: ["prism", "silly", "sinus", "since"] },
+  { puzzleNumber: 998, words: ["welts", "truss", "ratos", "ritos"] },
+  { puzzleNumber: 997, words: ["fully", "level", "local"] },
+  {
+    puzzleNumber: 996,
+    words: ["cubit", "morse", "plane", "awake", "evade", "heave"],
+  },
+  { puzzleNumber: 995, words: ["snark", "folks", "pesky"] },
+  { puzzleNumber: 994, words: ["cheat", "plaid", "spars", "grasp"] },
+  { puzzleNumber: 993, words: ["moany", "light", "heeds", "cheer"] },
+  { puzzleNumber: 992, words: ["coign", "dread", "reals", "early"] },
+  { puzzleNumber: 991, words: ["mirth", "plods", "blown", "clone"] },
+  { puzzleNumber: 990, words: ["skips", "offer", "regal", "teary"] },
+  { puzzleNumber: 989, words: ["sniff", "freed", "fetch", "flame"] },
+  { puzzleNumber: 988, words: ["ploys", "snare", "skate", "state"] },
+  { puzzleNumber: 987, words: ["saved", "trial", "groan", "urban"] },
+  { puzzleNumber: 986, words: ["patch", "tints", "emote", "forty"] },
   { puzzleNumber: 985, words: ["tumor", "blimp", "minds", "image"] },
   { puzzleNumber: 984, words: ["boost", "plane", "lemur", "gelid", "devil"] },
   { puzzleNumber: 983, words: ["fried", "eaten", "sense"] },
@@ -628,20 +651,21 @@ export const poems = [
   check proof tally audit digit
   sooth murky relax blare
   mucus nosey sniff snort snarl
-  juicy mango
   winch turbo evoke adopt flood
   decor panel shape frame image
   curve round whirl twirl swirl
   happy merry jolly giddy sunny
   legal theft prove crime bribe
-  audit clock proof probe prove
-  savvy brain guard aware alarm
-  { puzzleNumber: 13, words: ["error", "shame", "lapse", "cause"] },
-  { puzzleNumber: 12, words: ["vocal", "opera", "radio", "audio"] },
-  { puzzleNumber: 11, words: ["mouth", "pique", "sulky", "surly"] },
-  
+      
   */
 
+  { puzzleNumber: 20, words: ["error", "shame", "lapse", "cause"] },
+  { puzzleNumber: 19, words: ["mucus", "nosey", "sniff", "snort", "snarl"] },
+  { puzzleNumber: 18, words: ["vocal", "opera", "radio", "audio"] },
+  { puzzleNumber: 17, words: ["audit", "clock", "proof", "probe", "prove"] },
+  { puzzleNumber: 16, words: ["mouth", "pique", "sulky", "surly"] },
+  { puzzleNumber: 15, words: ["savvy", "brain", "guard", "aware", "alarm"] },
+  { puzzleNumber: 14, words: ["juicy", "mango"] },
   { puzzleNumber: 13, words: ["fruit", "cacao", "vodka", "lemon", "spoon"] },
   { puzzleNumber: 12, words: ["jelly", "glaze", "cream", "treat"] },
   { puzzleNumber: 11, words: ["motor", "alarm", "drive", "break", "wreck"] },
