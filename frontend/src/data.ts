@@ -1,4 +1,29 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  { puzzleNumber: 1030, words: ["louts", "druid", "equip"] },
+  { puzzleNumber: 1029, words: ["getup", "crisp", "blimp"] },
+  { puzzleNumber: 1028, words: ["lousy", "slate", "steel"] },
+  { puzzleNumber: 1027, words: ["grain", "lions", "twine", "whiny"] },
+  { puzzleNumber: 1026, words: ["autos", "soupy", "rouse", "house", "douse", "mouse", "louse"] },
+  { puzzleNumber: 1025, words: ["cover", "trout", "froth", "broth"] },
+  { puzzleNumber: 1024, words: ["revel", "beers", "eerie", "merge"] },
+  { puzzleNumber: 1023, words: ["viola", "thrum", "ceder", "drees", "greed", "breed"] },
+  { puzzleNumber: 1022, words: ["twill", "smile", "drily", "quilt", "child", "exile", "voila"] },
+  { puzzleNumber: 1021, words: ["magic", "slick", "piece", "birch", "witch", "finch"] },
+  { puzzleNumber: 1020, words: ["sicks", "blips", "geist", "wrist"] },
+  { puzzleNumber: 1019, words: ["bloom", "plumb", "climb"] },
+  { puzzleNumber: 1018, words: ["dream", "paths", "plant", "plait"] },
+  { puzzleNumber: 1017, words: ["quoin", "upper", "truce", "rerun", "serum"] },
+  { puzzleNumber: 1016, words: ["balot", "mores", "occur", "drony", "frond"] },
+  { puzzleNumber: 1015, words: ["ahead", "cairn", "fault", "tasty", "taboo"] },
+  { puzzleNumber: 1014, words: ["blank", "trios", "gorge", "force"] },
+  { puzzleNumber: 1013, words: ["wimpy", "meant", "seams", "realm"] },
+  { puzzleNumber: 1012, words: ["later", "awake", "knead", "speak"] },
+  { puzzleNumber: 1011, words: ["clank", "shine", "stony", "stunt", "stuns", "stung"] },
+  { puzzleNumber: 1010, words: ["quash", "party", "layer", "mayor"] },
+  { puzzleNumber: 1009, words: ["until", "leaps", "sally"] },
+  { puzzleNumber: 1008, words: ["sexed", "water", "towel"] },
+  { puzzleNumber: 1007, words: ["camps", "stint", "resin", "risen"] },
+  { puzzleNumber: 1006, words: ["aware", "pleat", "decay"] },
   { puzzleNumber: 1005, words: ["bleak", "teary", "shame", "shade"] },
   { puzzleNumber: 1004, words: ["forte", "pylon", "lions", "lingo"] },
   { puzzleNumber: 1003, words: ["munge", "space", "lathe", "abide"] },
@@ -647,18 +672,17 @@ export const poems = [
   chili lemon salty salad salsa
   bliss honor truth credo grace
   nutty silly goofy wacky crazy
-  syrup jelly gummy candy taffy
-  check proof tally audit digit
-  sooth murky relax blare
-  mucus nosey sniff snort snarl
-  winch turbo evoke adopt flood
-  decor panel shape frame image
-  curve round whirl twirl swirl
-  happy merry jolly giddy sunny
-  legal theft prove crime bribe
-      
   */
 
+  { puzzleNumber: 29, words: ["syrup", "jelly", "gummy", "candy", "taffy"] },
+  { puzzleNumber: 28, words: ["check", "proof", "tally", "audit", "digit"] },
+  { puzzleNumber: 27, words: ["sooth", "murky", "relax", "blare"] },
+  { puzzleNumber: 26, words: ["mucus", "nosey", "sniff", "snort", "snarl"] },
+  { puzzleNumber: 25, words: ["winch", "turbo", "evoke", "adopt", "flood"] },
+  { puzzleNumber: 24, words: ["decor", "panel", "shape", "frame", "image"] },
+  { puzzleNumber: 23, words: ["curve", "round", "whirl", "twirl", "swirl"] },
+  { puzzleNumber: 22, words: ["happy", "merry", "jolly", "giddy", "sunny"] },
+  { puzzleNumber: 21, words: ["legal", "theft", "prove", "crime", "bribe"] },
   { puzzleNumber: 20, words: ["error", "shame", "lapse", "cause"] },
   { puzzleNumber: 19, words: ["mucus", "nosey", "sniff", "snort", "snarl"] },
   { puzzleNumber: 18, words: ["vocal", "opera", "radio", "audio"] },
