@@ -1,5 +1,17 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // May 12th
+  // May 24th
+  { puzzleNumber: 1066, words: ["stake", "drone", "chide", "glide"] },
+  { puzzleNumber: 1065, words: ["highs", "shirt", "swish"] },
+  { puzzleNumber: 1064, words: ["tetra", "skate", "heart", "exact", "exalt"] },
+  { puzzleNumber: 1063, words: ["wonts", "manor", "bingo", "lingo", "jingo", "dingo"] },
+  { puzzleNumber: 1062, words: ["cafes", "cover", "ricer", "dicer", "nicer"] },
+  { puzzleNumber: 1061, words: ["keeps", "avoid", "icily", "witch", "hitch"] },
+  { puzzleNumber: 1060, words: ["circa", "route", "trout", "tutor"] },
+  { puzzleNumber: 1059, words: ["lathe", "trail", "stall"] },
+  { puzzleNumber: 1058, words: ["clout", "birch", "filch", "pinch"] },
+  { puzzleNumber: 1057, words: ["stone", "fails", "drags", "claws", "amass"] },
+  { puzzleNumber: 1056, words: ["lithe", "peter", "doter", "otter", "outer"] },
+  { puzzleNumber: 1055, words: ["punch", "ounce", "cumin"] },
   { puzzleNumber: 1054, words: ["lithe", "peter", "doter", "otter", "outer"] },
   { puzzleNumber: 1053, words: ["plate", "talon", "tidal"] },
   { puzzleNumber: 1052, words: ["drunk", "speed", "medal", "media"] },
