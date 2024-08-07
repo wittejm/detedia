@@ -1,5 +1,22 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // June 17th
+  // July 8th
+  { puzzleNumber: 1103, words: ["waltz", "ardor", "seamy", "snake", "shape"] },
+  { puzzleNumber: 1102, words: ["heron", "baton", "mason", "wagon", "canon"] },
+  { puzzleNumber: 1101, words: ["goose", "short", "scold", "scoff"] },
+  { puzzleNumber: 1100, words: ["campy", "roles", "fight", "thigh"] },
+  { puzzleNumber: 1099, words: ["relax", "wheat", "spade", "adage"] },
+  { puzzleNumber: 1098, words: ["filet", "essay", "beano", "zebra"] },
+  { puzzleNumber: 1097, words: ["blitz", "quack", "mopes", "heron", "erode", "drove"] },
+  { puzzleNumber: 1096, words: ["adage", "plank", "claim", "blast", "flash", "slash"] },
+  { puzzleNumber: 1095, words: ["funds", "dread", "order"] },
+  { puzzleNumber: 1094, words: ["zippy", "quart", "axles", "genoa", "knead"] },
+  { puzzleNumber: 1093, words: ["virus", "savor"] },
+  { puzzleNumber: 1092, words: ["waits", "verge", "gnome", "bugle"] },
+  { puzzleNumber: 1091, words: ["chump", "react", "evict", "edict"] },
+  { puzzleNumber: 1090, words: ["depot", "print", "paint"] },
+  { puzzleNumber: 1089, words: ["mange", "needs", "skein", "spent", "scent"] },
+  { puzzleNumber: 1088, words: ["prion", "rates", "strew", "terse"] },
+  { puzzleNumber: 1087, words: ["plows", "ebony", "doted", "cover"] },
   { puzzleNumber: 1086, words: ["creed", "froth", "organ", "brios", "prior"] },
   { puzzleNumber: 1085, words: ["enact", "noisy", "grind"] },
   { puzzleNumber: 1084, words: ["parch", "prism", "prone", "proud"] },
