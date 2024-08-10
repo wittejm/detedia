@@ -142,7 +142,7 @@ function KeyButton({
                 ? "red"
                 : {
                     green: "#228B22",
-                    white: "white",
+                    white: "EEEEEE",
                     yellow: "#FFEECC",
                     blank: "#ACACAC",
                   }[color]
@@ -153,9 +153,9 @@ function KeyButton({
             fill={
               {
                 green: "#6bd425",
-                white: "white",
+                white: "#DDDDDD",
                 yellow: "#FFD700",
-                blank: "#DCDCDC",
+                blank: "#BBBBBB",
               }[color]
             }
             key={index}
