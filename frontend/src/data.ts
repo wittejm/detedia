@@ -1,5 +1,41 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Aug 14th
+  // Sept 8th
+  { puzzleNumber: 1155, words: ["prays", "crate", "fraud", "drain", "drawn"] },
+  { puzzleNumber: 1154, words: ["coves", "other", "older", "owner"] },
+  { puzzleNumber: 1153, words: ["lower", "rears", "retry", "rerun"] },
+  { puzzleNumber: 1152, words: ["okays", "flier", "given", "wizen", "widen"] },
+  { puzzleNumber: 1151, words: ["adhoc", "wares", "fanny", "faint"] },
+  {
+    puzzleNumber: 1150,
+    words: ["banal", "truck", "quids", "pussy", "gushy", "mushy"],
+  },
+  { puzzleNumber: 1149, words: ["sewer", "scant", "shout", "spout"] },
+  { puzzleNumber: 1148, words: ["matin", "anode", "snake", "knave"] },
+  {
+    puzzleNumber: 1147,
+    words: ["razer", "thigh", "bowls", "lucky", "plunk", "flunk"],
+  },
+  { puzzleNumber: 1146, words: ["saint", "titty", "lithe"] },
+  {
+    puzzleNumber: 1145,
+    words: ["payer", "round", "snort", "groin", "frown", "brown", "crown"],
+  },
+  { puzzleNumber: 1144, words: ["avast", "stare", "stale", "stake"] },
+  { puzzleNumber: 1143, words: ["snark", "skate"] },
+  {
+    puzzleNumber: 1142,
+    words: ["house", "exact", "tenet", "pipet", "bidet", "filet"],
+  },
+  { puzzleNumber: 1141, words: ["space", "trine", "wrote", "brute"] },
+  { puzzleNumber: 1140, words: ["stoke", "flair", "gulpy", "mulch"] },
+  { puzzleNumber: 1139, words: ["media", "deads", "decal", "delay"] },
+  { puzzleNumber: 1138, words: ["whelm", "meant", "prime"] },
+  {
+    puzzleNumber: 1137,
+    words: ["traps", "magma", "waved", "bacon", "fanny", "janky", "lanky"],
+  },
+  { puzzleNumber: 1136, words: ["pizza", "turds", "store", "stork", "storm"] },
+  { puzzleNumber: 1135, words: ["rinse", "groan", "adorn", "acorn"] },
   { puzzleNumber: 1134, words: ["humpy", "cinch", "there", "share", "shore"] },
   { puzzleNumber: 1133, words: ["final", "snide", "twine", "noise", "neigh"] },
   { puzzleNumber: 1132, words: ["carve", "moths", "skill", "skiff"] },
