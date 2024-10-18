@@ -1,5 +1,50 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Sept 8th
+  { puzzleNumber: 1180, words: ["caper", "daily", "wagon"] },
+  { puzzleNumber: 1179, words: ["count", "wears", "sheep", "shelf", "shell"] },
+  {
+    puzzleNumber: 1178,
+    words: ["steak", "brine", "regex", "flued", "dopey", "modem"],
+  },
+  { puzzleNumber: 1177, words: ["dreck", "clads", "cloud"] },
+  {
+    puzzleNumber: 1176,
+    words: ["sober", "diner", "wider", "hider", "cider", "rider"],
+  },
+  { puzzleNumber: 1175, words: ["shift", "claim", "drain", "grain", "brain"] },
+  { puzzleNumber: 1174, words: ["sider", "thing", "faith"] },
+  { puzzleNumber: 1173, words: ["foggy", "nears", "bland", "chant", "thank"] },
+  { puzzleNumber: 1172, words: ["trout", "torso", "torch"] },
+  {
+    puzzleNumber: 1171,
+    words: ["croon", "river", "marry", "barry", "larry", "harry"],
+  },
+  { puzzleNumber: 1170, words: ["birds", "glade", "caddy", "pandy", "handy"] },
+  { puzzleNumber: 1169, words: ["alpha", "razor", "quack", "began", "steam"] },
+  { puzzleNumber: 1168, words: ["beans", "sense", "seven"] },
+  { puzzleNumber: 1167, words: ["artsy", "souls", "spode", "shone", "smoke"] },
+  { puzzleNumber: 1166, words: ["exist", "dress", "press"] },
+  {
+    puzzleNumber: 1165,
+    words: ["faddy", "forty", "funny", "fuzzy", "fugly", "fully"],
+  },
+  {
+    puzzleNumber: 1164,
+    words: ["meiny", "serfs", "pedal", "weave", "heath", "beaut"],
+  },
+  { puzzleNumber: 1163, words: ["meint", "ender", "panel", "cones", "honey"] },
+  {
+    puzzleNumber: 1162,
+    words: ["badly", "often", "piece", "sects", "gecko", "recur"],
+  },
+  { puzzleNumber: 1161, words: ["props", "trove", "groan", "croak", "broad"] },
+  { puzzleNumber: 1160, words: ["belee", "watch", "harsh"] },
+  { puzzleNumber: 1159, words: ["money", "raids", "frats", "grabs", "brass"] },
+  {
+    puzzleNumber: 1158,
+    words: ["gazer", "metal", "blade", "apple", "ahole", "anile", "aisle"],
+  },
+  { puzzleNumber: 1157, words: ["navel", "repel", "rebel"] },
+  { puzzleNumber: 1156, words: ["slurp", "cheat", "bidet", "debit"] },
   { puzzleNumber: 1155, words: ["prays", "crate", "fraud", "drain", "drawn"] },
   { puzzleNumber: 1154, words: ["coves", "other", "older", "owner"] },
   { puzzleNumber: 1153, words: ["lower", "rears", "retry", "rerun"] },
