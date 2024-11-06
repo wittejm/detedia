@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HeaderControls from "./HeaderControls";
+import HeaderControls, {numSuperHardModeViolations, numSuperHardModeViolationsForPuzzleIndex} from "./HeaderControls";
 import Keyboard from "./Keyboard";
 import Puzzle from "./Puzzle";
 import Submissions from "./Submissions";
@@ -14,6 +14,18 @@ function submitGuess(
   source: string,
   data: { puzzleNumber: number, words: string[] }[]
 ) {
+  const puzzleIsSuperHardMode = numSuperHardModeViolationsForPuzzleIndex(activePuzzleIndex, data) == 0;
+  const joinedGuess: string[] = []
+  for(let i=0; i<guess.length/5; i++) {
+    joinedGuess.push(guess.slice(5*i, 5*(i+1)).join('').toLowerCase())
+  }
+  const submissionIsSuperHardMode = numSuperHardModeViolations(joinedGuess, joinedGuess[joinedGuess.length-1]) == 0;
+  if (puzzleIsSuperHardMode && !submissionIsSuperHardMode) {
+    const proceed = confirm('This answer does not qualify as super hard mode. Submit anyway?')
+    if (!proceed) {
+      return
+    }
+  }
   const newSubmissions = [guess, ...submissions];
   saveGuesses(activePuzzleIndex, newSubmissions, source, data);
   setSubmissions(newSubmissions);

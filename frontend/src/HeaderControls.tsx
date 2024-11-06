@@ -66,7 +66,7 @@ function HeaderControls({ activePuzzleIndex, source, data }: Props) {
         />
         <div className="headerText">
           {data[activePuzzleIndex].puzzleNumber}
-          {"!".repeat(numSuperHardModeViolations(activePuzzleIndex, data))}
+          {"!".repeat(numSuperHardModeViolationsForPuzzleIndex(activePuzzleIndex, data))}
         </div>
         <NavButton
           text=">"
@@ -100,10 +100,16 @@ function NavButton({ text, onClick }: NavButtonProps) {
 }
 export default HeaderControls;
 
-function numSuperHardModeViolations(
+export function numSuperHardModeViolationsForPuzzleIndex(
   activePuzzleIndex: number,
   data: { puzzleNumber: number; words: string[] }[],
 ) {
+  const sourceWords = data[activePuzzleIndex].words;
+  const trueWord = sourceWords[sourceWords.length - 1];
+  return numSuperHardModeViolations(sourceWords, trueWord)
+}
+
+export function numSuperHardModeViolations(sourceWords :string[], trueWord: string) {
   // for each previous word and subsequent word, and for each letter in the subsequent word,
   // consider whether that letter is a violation of yellows or grays.
   // It's a violation of yellow if it's the same letter as the letter at that index in the previous word.
@@ -111,9 +117,7 @@ function numSuperHardModeViolations(
   //   - there is at least one gray of this letter in the previous word
   //   - AND the number of this letter in the previous word exceeds
   //         the number of yellows and greens of the letter in the previous word.
-  const sourceWords = data[activePuzzleIndex].words;
-  const trueWord = sourceWords[sourceWords.length - 1];
-  const puzzleLettersLength = 5 * data[activePuzzleIndex].words.length;
+  const puzzleLettersLength = 5 * sourceWords.length;
   const isAViolationFlags: number[] = Array(puzzleLettersLength).fill(0);
   sourceWords.forEach((previousWord: string, previousIndex: number) => {
     sourceWords
