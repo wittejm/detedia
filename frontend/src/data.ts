@@ -1,4 +1,55 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  // Nov 6
+  { puzzleNumber: 1209, words: ["flash", "tried", "miner"] },
+  { puzzleNumber: 1208, words: ["taupe", "thuds", "truck", "trull", "truly"] },
+  { puzzleNumber: 1207, words: ["voted", "otter", "octet"] },
+  { puzzleNumber: 1206, words: ["tater", "soupy", "lying", "flyin", "vinyl"] },
+  {
+    puzzleNumber: 1205,
+    words: ["namer", "slate", "glade", "flake", "place", "blaze"],
+  },
+  { puzzleNumber: 1204, words: ["bonza", "oncer", "knots", "snoop"] },
+  { puzzleNumber: 1203, words: ["pandy", "routs", "shite", "sixth"] },
+  { puzzleNumber: 1202, words: ["avers", "metro", "berry", "weird"] },
+  { puzzleNumber: 1201, words: ["solar", "lapse", "easle", "easel"] },
+  { puzzleNumber: 1200, words: ["morin", "leads", "gaudy", "bawdy"] },
+  { puzzleNumber: 1199, words: ["curls", "spoon", "snift", "sense", "sandy"] },
+  {
+    puzzleNumber: 1198,
+    words: ["thrum", "bears", "raced", "clear", "great", "freak", "wreak"],
+  },
+  { puzzleNumber: 1197, words: ["every", "wrong", "crown", "frown"] },
+  { puzzleNumber: 1196, words: ["waste", "still", "snout", "shout"] },
+  { puzzleNumber: 1195, words: ["admin", "rerun", "colon", "spoon"] },
+  { puzzleNumber: 1194, words: ["gayer", "money", "piley", "divey", "dicey"] },
+  {
+    puzzleNumber: 1193,
+    words: ["skier", "viner", "cider", "tiler", "hiper", "fiber"],
+  },
+  { puzzleNumber: 1192, words: ["mivvy", "innit", "stint"] },
+  {
+    puzzleNumber: 1191,
+    words: ["boson", "trier", "weedy", "clame", "value", "halve"],
+  },
+  {
+    puzzleNumber: 1190,
+    words: ["volks", "whare", "drain", "brant", "trant", "grant"],
+  },
+  {
+    puzzleNumber: 1189,
+    words: ["teste", "whelm", "grief", "paper", "nuder", "joker", "corer"],
+  },
+  { puzzleNumber: 1188, words: ["birth", "total", "stays", "mated", "gamut"] },
+  { puzzleNumber: 1187, words: ["blurb", "rotor", "servo", "prone"] },
+  { puzzleNumber: 1186, words: ["mylar", "phony", "gusty"] },
+  { puzzleNumber: 1185, words: ["forth", "early", "dares", "garre", "carve"] },
+  { puzzleNumber: 1184, words: ["vague", "frith", "polly", "moody", "mommy"] },
+  { puzzleNumber: 1183, words: ["slant", "front", "point", "joint"] },
+  { puzzleNumber: 1182, words: ["fault", "flume", "flour"] },
+  {
+    puzzleNumber: 1181,
+    words: ["olden", "patel", "lamer", "layer", "laser", "lager"],
+  },
   { puzzleNumber: 1180, words: ["caper", "daily", "wagon"] },
   { puzzleNumber: 1179, words: ["count", "wears", "sheep", "shelf", "shell"] },
   {
