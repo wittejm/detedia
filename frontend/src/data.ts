@@ -1,5 +1,24 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Nov 6
+
+  // Dec 3
+  { puzzleNumber: 1227, words: ["spake", "snaky", "shaky"] },
+  { puzzleNumber: 1226, words: ["scrip", "igloo", "glide", "guile"] },
+  { puzzleNumber: 1225, words: ["misty", "magma", "maned", "maple", "mauve" ] },
+  { puzzleNumber: 1224, words: ["alike", "brats", "gammy", "magma", "dogma"] },
+  { puzzleNumber: 1223, words: ["hyped", "hippo"] },
+  { puzzleNumber: 1222, words: ["tanks", "crock", "clock", "chock"] },
+  { puzzleNumber: 1221, words: ["blurb", "slope", "slant", "slang"] },
+  { puzzleNumber: 1220, words: ["amour", "feint", "piths", "witch"] },
+  { puzzleNumber: 1219, words: ["bylaw", "brews", "brown"] },
+  { puzzleNumber: 1218, words: ["wands", "swell", "twist"] },
+  { puzzleNumber: 1217, words: ["timer", "evens", "webby", "ledgy", "jelly"] },
+  { puzzleNumber: 1216, words: ["opted", "peely", "peril", "pearl"] },
+  { puzzleNumber: 1215, words: ["opted", "scope", "posse", "poise"] },
+  { puzzleNumber: 1214, words: ["aptly", "oppos", "spine"] },
+  { puzzleNumber: 1213, words: ["reuse", "glide", "tithe", "niche"] },
+  { puzzleNumber: 1212, words: ["repun", "noisy", "joint", "going"] },
+  { puzzleNumber: 1211, words: ["deals", "snort", "borks", "visor"] },
+  { puzzleNumber: 1210, words: ["ravin", "venus", "ovine", "event"] },
   { puzzleNumber: 1209, words: ["flash", "tried", "miner"] },
   { puzzleNumber: 1208, words: ["taupe", "thuds", "truck", "trull", "truly"] },
   { puzzleNumber: 1207, words: ["voted", "otter", "octet"] },
