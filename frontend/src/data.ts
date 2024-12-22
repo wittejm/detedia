@@ -1,9 +1,34 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-
-  // Dec 3
+  // Dec 22
+  { puzzleNumber: 1282, words: ["scrab", "barky", "brain", "brawn"] },
+  {
+    puzzleNumber: 1281,
+    words: ["poohs", "fried", "medal", "ealed", "glade", "blade"],
+  },
+  { puzzleNumber: 1280, words: ["shirk", "flesh", "flash"] },
+  { puzzleNumber: 1279, words: ["wight", "bawls", "scowl"] },
+  { puzzleNumber: 1278, words: ["fanon", "croak", "adobe", "boats", "boast"] },
+  { puzzleNumber: 1277, words: ["dopey", "jazzy", "grimy", "sucky", "funky"] },
+  { puzzleNumber: 1276, words: ["rotor", "tasty", "innit", "bidet", "eight"] },
+  {
+    puzzleNumber: 1275,
+    words: ["tofus", "model", "power", "boner", "borer", "boxer"],
+  },
+  {
+    puzzleNumber: 1274,
+    words: ["group", "thing", "sling", "aging", "being", "dying", "vying"],
+  },
+  { puzzleNumber: 1273, words: ["press", "point", "pavvy", "plumb"] },
+  { puzzleNumber: 1272, words: ["actin", "ratio", "patio"] },
+  { puzzleNumber: 1271, words: ["glyph", "bling", "clang", "flung"] },
+  { puzzleNumber: 1270, words: ["vital", "saner", "meany", "hyena"] },
+  { puzzleNumber: 1269, words: ["annoy", "bumpy", "silty", "hilly"] },
+  { puzzleNumber: 1268, words: ["shart", "shool", "shone", "shove"] },
+  { puzzleNumber: 1267, words: ["bumps", "react", "envoy", "ennog", "endow"] },
+  { puzzleNumber: 1266, words: ["oscar", "crude", "crith", "crypt"] },
   { puzzleNumber: 1227, words: ["spake", "snaky", "shaky"] },
   { puzzleNumber: 1226, words: ["scrip", "igloo", "glide", "guile"] },
-  { puzzleNumber: 1225, words: ["misty", "magma", "maned", "maple", "mauve" ] },
+  { puzzleNumber: 1225, words: ["misty", "magma", "maned", "maple", "mauve"] },
   { puzzleNumber: 1224, words: ["alike", "brats", "gammy", "magma", "dogma"] },
   { puzzleNumber: 1223, words: ["hyped", "hippo"] },
   { puzzleNumber: 1222, words: ["tanks", "crock", "clock", "chock"] },
