@@ -1,4 +1,21 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  {
+    puzzleNumber: 1289,
+    words: ["again", "maker", "maths", "madly", "mapou", "mambo"],
+  },
+  { puzzleNumber: 1288, words: ["golfs", "brine", "racer", "decry"] },
+  {
+    puzzleNumber: 1287,
+    words: ["tines", "voila", "magic", "braid", "wuxia", "affix"],
+  },
+  {
+    puzzleNumber: 1286,
+    words: ["comes", "sense", "sithe", "shade", "shave", "share"],
+  },
+  { puzzleNumber: 1285, words: ["annal", "labor", "salut", "dalle", "maple"] },
+  { puzzleNumber: 1284, words: ["silly", "dumbs", "beans", "bones"] },
+  { puzzleNumber: 1283, words: ["weary", "allot", "cavas", "sanga", "sauna"] },
+
   // Dec 22
   { puzzleNumber: 1282, words: ["scrab", "barky", "brain", "brawn"] },
   {
