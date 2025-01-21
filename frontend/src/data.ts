@@ -1,4 +1,29 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
+  // Jan 22nd
+  { puzzleNumber: 1313, words: ["grout", "bling", "vying", "aging", "icing"] },
+  { puzzleNumber: 1312, words: ["goody", "bones", "moler", "cover", "tower", "power", "rower"] },
+  { puzzleNumber: 1311, words: ["blues", "salty", "silly"] },
+  { puzzleNumber: 1310, words: ["codex", "prove", "prone", "probe", "prose"] },
+  { puzzleNumber: 1309, words: ["brink", "knack"] },
+  { puzzleNumber: 1308, words: ["clamp", "hacks", "farce", "fancy"] },
+  { puzzleNumber: 1307, words: ["bitte", "sworn", "gloam", "cloak"] },
+  { puzzleNumber: 1306, words: ["yoyos", "board", "focal", "total"] },
+  { puzzleNumber: 1305, words: ["makes", "croon", "bling", "dingy"] },
+  { puzzleNumber: 1304, words: ["trite", "drunk", "frogs", "crawl"] },
+  { puzzleNumber: 1303, words: ["dorts", "braid"] },
+  { puzzleNumber: 1302, words: ["curny", "rager", "paler", "waver", "water", "wafer"] },
+  { puzzleNumber: 1301, words: ["lolly", "range", "scram", "after", "draft"] },
+  { puzzleNumber: 1300, words: ["hovel", "slips", "lurks", "malts", "atlas"] },
+  { puzzleNumber: 1299, words: ["lumps", "grand", "ribby", "cyber"] },
+  { puzzleNumber: 1298, words: ["recur", "craig", "crios", "crith", "crimp"] },
+  { puzzleNumber: 1297, words: ["smith", "heard", "phage", "cheap"] },
+  { puzzleNumber: 1296, words: ["runny", "serve", "trice", "afore", "glare"] },
+  { puzzleNumber: 1295, words: ["bread", "ethos", "shoes", "chose"] },
+  { puzzleNumber: 1294, words: ["vizir", "piler", "cider", "biter", "wiser", "fixer", "finer"] },
+  { puzzleNumber: 1293, words: ["entry", "rends", "neral", "nerve"] },
+  { puzzleNumber: 1292, words: ["lisps", "lever", "lemur"] },
+  { puzzleNumber: 1291, words: ["addle", "cache", "grate", "stare"] },
+  { puzzleNumber: 1290, words: ["youse", "hired", "rhino", "train", "brain", "grain"] },
   {
     puzzleNumber: 1289,
     words: ["again", "maker", "maths", "madly", "mapou", "mambo"],
@@ -16,7 +41,6 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 1284, words: ["silly", "dumbs", "beans", "bones"] },
   { puzzleNumber: 1283, words: ["weary", "allot", "cavas", "sanga", "sauna"] },
 
-  // Dec 22
   { puzzleNumber: 1282, words: ["scrab", "barky", "brain", "brawn"] },
   {
     puzzleNumber: 1281,
