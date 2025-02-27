@@ -1,7 +1,56 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Jan 22nd
+  // Feb 16th
+  {
+    puzzleNumber: 1338,
+    words: ["blams", "snake", "stare", "spade", "shave", "suave"],
+  },
+  {
+    puzzleNumber: 1337,
+    words: ["whump", "grind", "broke", "frock", "croak", "crock", "crook"],
+  },
+  {
+    puzzleNumber: 1336,
+    words: ["harms", "peely", "kinky", "diddy", "dizzy", "divvy", "ditty"],
+  },
+  { puzzleNumber: 1335, words: ["snarf", "raged", "rotal", "rumba"] },
+  { puzzleNumber: 1334, words: ["carol", "roche", "score"] },
+  {
+    puzzleNumber: 1333,
+    words: ["voice", "bowls", "boots", "boars", "bobos", "bongs", "bonus"],
+  },
+  { puzzleNumber: 1332, words: ["caulk", "prime", "doped", "steep"] },
+  { puzzleNumber: 1331, words: ["nouns", "slice", "sprat", "staff", "swath"] },
+  { puzzleNumber: 1330, words: ["grand", "style", "bloop", "pilum", "pupil"] },
+  { puzzleNumber: 1329, words: ["luger", "saint", "booth", "tooth"] },
+  {
+    puzzleNumber: 1328,
+    words: ["curly", "berry", "worry", "marry", "tarry", "harry", "parry"],
+  },
+  { puzzleNumber: 1327, words: ["chode", "frite", "spare", "gurge", "revue"] },
+  { puzzleNumber: 1326, words: ["freet", "reals", "prove", "whore", "chore"] },
+  { puzzleNumber: 1325, words: ["chaps", "grind", "riley", "river", "rivet"] },
+  { puzzleNumber: 1324, words: ["compo", "roans", "boast", "toast"] },
+  { puzzleNumber: 1323, words: ["quork", "weald", "lazes", "salse", "false"] },
+  {
+    puzzleNumber: 1322,
+    words: ["balks", "privy", "toner", "fewer", "ruder", "udder"],
+  },
+  { puzzleNumber: 1321, words: ["gnash", "drive", "rivet", "lover", "fever"] },
+  { puzzleNumber: 1320, words: ["sanga", "snoop", "stunk", "shunt"] },
+  { puzzleNumber: 1319, words: ["sooth", "sense", "sunny"] },
+  { puzzleNumber: 1318, words: ["egads", "shorn", "rusty", "prism", "crisp"] },
+  {
+    puzzleNumber: 1317,
+    words: ["scuzz", "dates", "flays", "grams", "brans", "brass"],
+  },
+  { puzzleNumber: 1316, words: ["bugle", "dance", "score", "crime", "crepe"] },
+  { puzzleNumber: 1315, words: ["boded", "miles", "payer", "upper"] },
+  { puzzleNumber: 1314, words: ["adder", "reaps", "realm", "reach"] },
   { puzzleNumber: 1313, words: ["grout", "bling", "vying", "aging", "icing"] },
-  { puzzleNumber: 1312, words: ["goody", "bones", "moler", "cover", "tower", "power", "rower"] },
+  {
+    puzzleNumber: 1312,
+    words: ["goody", "bones", "moler", "cover", "tower", "power", "rower"],
+  },
   { puzzleNumber: 1311, words: ["blues", "salty", "silly"] },
   { puzzleNumber: 1310, words: ["codex", "prove", "prone", "probe", "prose"] },
   { puzzleNumber: 1309, words: ["brink", "knack"] },
@@ -11,7 +60,10 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 1305, words: ["makes", "croon", "bling", "dingy"] },
   { puzzleNumber: 1304, words: ["trite", "drunk", "frogs", "crawl"] },
   { puzzleNumber: 1303, words: ["dorts", "braid"] },
-  { puzzleNumber: 1302, words: ["curny", "rager", "paler", "waver", "water", "wafer"] },
+  {
+    puzzleNumber: 1302,
+    words: ["curny", "rager", "paler", "waver", "water", "wafer"],
+  },
   { puzzleNumber: 1301, words: ["lolly", "range", "scram", "after", "draft"] },
   { puzzleNumber: 1300, words: ["hovel", "slips", "lurks", "malts", "atlas"] },
   { puzzleNumber: 1299, words: ["lumps", "grand", "ribby", "cyber"] },
@@ -19,11 +71,17 @@ export const wordle: { puzzleNumber: number; words: string[] }[] = [
   { puzzleNumber: 1297, words: ["smith", "heard", "phage", "cheap"] },
   { puzzleNumber: 1296, words: ["runny", "serve", "trice", "afore", "glare"] },
   { puzzleNumber: 1295, words: ["bread", "ethos", "shoes", "chose"] },
-  { puzzleNumber: 1294, words: ["vizir", "piler", "cider", "biter", "wiser", "fixer", "finer"] },
+  {
+    puzzleNumber: 1294,
+    words: ["vizir", "piler", "cider", "biter", "wiser", "fixer", "finer"],
+  },
   { puzzleNumber: 1293, words: ["entry", "rends", "neral", "nerve"] },
   { puzzleNumber: 1292, words: ["lisps", "lever", "lemur"] },
   { puzzleNumber: 1291, words: ["addle", "cache", "grate", "stare"] },
-  { puzzleNumber: 1290, words: ["youse", "hired", "rhino", "train", "brain", "grain"] },
+  {
+    puzzleNumber: 1290,
+    words: ["youse", "hired", "rhino", "train", "brain", "grain"],
+  },
   {
     puzzleNumber: 1289,
     words: ["again", "maker", "maths", "madly", "mapou", "mambo"],
