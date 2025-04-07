@@ -1,5 +1,35 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Feb 16th
+  // March 13th
+  { puzzleNumber: 1359, words: ["verso", "these", "chase"] },
+  { puzzleNumber: 1358, words: ["yowza", "tared", "tract", "track"] },
+  {
+    puzzleNumber: 1357,
+    words: ["extra", "tends", "stole", "shute", "smite", "spite"],
+  },
+  { puzzleNumber: 1356, words: ["wonts", "grime", "greed"] },
+  { puzzleNumber: 1355, words: ["reave", "waved", "faves", "gavel", "navel"] },
+  { puzzleNumber: 1354, words: ["worse", "bumpy", "until", "laugh", "fluff"] },
+  { puzzleNumber: 1353, words: ["boofy", "croon", "groom", "troop"] },
+  { puzzleNumber: 1352, words: ["kapow", "assay", "antre", "avert", "alert"] },
+  { puzzleNumber: 1351, words: ["mouse", "scrum"] },
+  { puzzleNumber: 1350, words: ["shims", "choke", "cheek", "check"] },
+  { puzzleNumber: 1349, words: ["loser", "sevir", "shear", "spear"] },
+  { puzzleNumber: 1348, words: ["feats", "melty", "betty", "genty", "deity"] },
+  {
+    puzzleNumber: 1347,
+    words: ["stump", "under", "ghoul", "quick", "buffy", "fuzzy"],
+  },
+  { puzzleNumber: 1346, words: ["mound", "dolls", "lordy", "lodge"] },
+  { puzzleNumber: 1345, words: ["junta", "feebs", "error", "dryer"] },
+  { puzzleNumber: 1344, words: ["minus", "nerdy", "blond", "gland"] },
+  { puzzleNumber: 1343, words: ["ladle", "steer", "other", "otter"] },
+  { puzzleNumber: 1342, words: ["spews", "creed", "creek", "cream"] },
+  {
+    puzzleNumber: 1341,
+    words: ["loony", "blows", "gloam", "flour", "plock", "clove"],
+  },
+  { puzzleNumber: 1340, words: ["cruft", "needs", "dinge", "indie"] },
+  { puzzleNumber: 1339, words: ["masts", "trace", "trawl", "trail"] },
   {
     puzzleNumber: 1338,
     words: ["blams", "snake", "stare", "spade", "shave", "suave"],
