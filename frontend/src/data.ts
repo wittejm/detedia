@@ -1,5 +1,15 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // March 13th
+// Mar 26
+  { puzzleNumber: 1369, words: ["sated", "steem", "sleet", "skeet", "sheet"] },
+  { puzzleNumber: 1368, words: ["crows", "monad", "poddy", "dopey"] },
+  { puzzleNumber: 1367, words: ["extra", "artsy", "ratch", "ratan", "ratio"] },
+  { puzzleNumber: 1366, words: ["brank", "lunet", "nudge"] },
+  { puzzleNumber: 1365, words: ["droop", "bunch", "bases", "baste"] },
+  { puzzleNumber: 1364, words: ["today", "paves", "spawn", "spark"] },
+  { puzzleNumber: 1363, words: ["clack", "laser", "lasso"] },
+  { puzzleNumber: 1362, words: ["spans", "scape", "stamp"] },
+  { puzzleNumber: 1361, words: ["brood", "diddy", "ladle"] },
+  { puzzleNumber: 1360, words: ["merde", "scene", "clepe", "piece"] },
   { puzzleNumber: 1359, words: ["verso", "these", "chase"] },
   { puzzleNumber: 1358, words: ["yowza", "tared", "tract", "track"] },
   {
