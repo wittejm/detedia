@@ -1,5 +1,15 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Apr 4
+  // Apr 21
+  { puzzleNumber: 1389, words: ["plays", "spart", "spate"] },
+  { puzzleNumber: 1388, words: ["paris", "tired", "dirge"] },
+  { puzzleNumber: 1387, words: ["focus", "snowy", "spore", "sloot", "stook", "stood"] },
+  { puzzleNumber: 1386, words: ["acres", "parry", "moria", "moral"] },
+  { puzzleNumber: 1385, words: ["cuffs", "spoil", "asset", "ashed", "ashen"] },
+  { puzzleNumber: 1384, words: ["pages", "sense", "crest"] },
+  { puzzleNumber: 1383, words: ["avert", "truck", "turns", "turfy", "turbo"] },
+  { puzzleNumber: 1382, words: ["hardy", "shame", "cheat", "wheat"] },
+  { puzzleNumber: 1381, words: ["allot", "palls", "villa"] },
+  { puzzleNumber: 1380, words: ["nulls", "grime", "chomp", "mommy", "foamy"] },
   { puzzleNumber: 1379, words: ["freed", "group", "crass", "brink", "krill"] },
   { puzzleNumber: 1378, words: ["blind", "ninth", "finer", "singe", "since"] },
   {
