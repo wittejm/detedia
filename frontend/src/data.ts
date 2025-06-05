@@ -1,5 +1,24 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-// Mar 26
+  // Apr 4
+  { puzzleNumber: 1379, words: ["freed", "group", "crass", "brink", "krill"] },
+  { puzzleNumber: 1378, words: ["blind", "ninth", "finer", "singe", "since"] },
+  {
+    puzzleNumber: 1377,
+    words: ["okays", "sprat", "stear", "smear", "spear", "shear"],
+  },
+  {
+    puzzleNumber: 1376,
+    words: ["freak", "swath", "staid", "stags", "stamp", "stall"],
+  },
+  { puzzleNumber: 1375, words: ["craps", "corse", "curse"] },
+  { puzzleNumber: 1374, words: ["point", "serve", "beech", "weedy", "jewel"] },
+  { puzzleNumber: 1373, words: ["sates", "quack", "album", "awful", "afoul"] },
+  {
+    puzzleNumber: 1372,
+    words: ["glass", "vouch", "ronin", "pommy", "toffy", "dotty", "booty"],
+  },
+  { puzzleNumber: 1371, words: ["enact", "plods", "sorry"] },
+  { puzzleNumber: 1370, words: ["input", "barge", "force", "verse"] },
   { puzzleNumber: 1369, words: ["sated", "steem", "sleet", "skeet", "sheet"] },
   { puzzleNumber: 1368, words: ["crows", "monad", "poddy", "dopey"] },
   { puzzleNumber: 1367, words: ["extra", "artsy", "ratch", "ratan", "ratio"] },
