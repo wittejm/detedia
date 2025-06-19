@@ -92,7 +92,14 @@ function PuzzlePage({ activePuzzleIndex, source, data }: Props) {
           text: 'Check this out',
         });
       } else {
-        alert('Sharing not supported on this browser');
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `detedia_${data[activePuzzleIndex].puzzleNumber}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
       }
     } catch (err) {
       console.error('Failed to capture/share', err);
