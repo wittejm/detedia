@@ -4,6 +4,8 @@ import Keyboard from "./Keyboard";
 import Puzzle from "./Puzzle";
 import Submissions from "./Submissions";
 import "./App.css";
+import domtoimage from 'dom-to-image-more';
+import { useRef } from 'react';
 
 function submitGuess(
   guess: string[],
@@ -45,6 +47,7 @@ function PuzzlePage({ activePuzzleIndex, source, data }: Props) {
   );
   const [cursorIndex, setCursorIndex] = useState(0);
   const [submissions, setSubmissions] = useState<string[][]>([]);
+  const ref = useRef<HTMLDivElement>(null);
 
   const changePuzzle = (puzzleIndex: number) => {
     const priorSubmissions = getProgressFromStorage(puzzleIndex, source, data);
@@ -62,11 +65,44 @@ function PuzzlePage({ activePuzzleIndex, source, data }: Props) {
     setCursorIndex(0);
   };
 
+  async function captureAndShare() {
+    if (!ref.current) {
+      console.log("no ref")
+      return;
+    }
+
+    try {
+      const blob = await domtoimage.toBlob(ref.current, {
+        style: {
+          // optional tweaks if needed
+          transform: 'scale(1)',
+          transformOrigin: 'top left',
+        },
+        height: ref.current.scrollHeight, // important for tall content
+        width: ref.current.scrollWidth,
+      });
+
+      const file = new File([blob], 'screenshot.png', { type: 'image/png' });
+
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({
+          files: [file],
+          title: 'My letter',
+          text: 'Check this out',
+        });
+      } else {
+        alert('Sharing not supported on this browser');
+      }
+    } catch (err) {
+      console.error('Failed to capture/share', err);
+    }
+  }
+
   useEffect(() => changePuzzle(activePuzzleIndex), [activePuzzleIndex]);
 
   return (
-    <div className="DetediaPage">
-      <HeaderControls activePuzzleIndex={activePuzzleIndex} source={source} data={data} />
+    <div className="DetediaPage" ref={ref}>
+      <HeaderControls activePuzzleIndex={activePuzzleIndex} source={source} data={data} captureAndShare={captureAndShare} />
       <Puzzle
         activePuzzleIndex={activePuzzleIndex}
         guess={guess}

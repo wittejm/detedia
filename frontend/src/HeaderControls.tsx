@@ -15,9 +15,10 @@ type Props = {
   activePuzzleIndex: number;
   source: string;
   data: { puzzleNumber: number; words: string[] }[];
+  captureAndShare: () => void;
 };
 
-function HeaderControls({ activePuzzleIndex, source, data }: Props) {
+function HeaderControls({ activePuzzleIndex, source, data, captureAndShare }: Props) {
   const navigate = useNavigate();
   return (
     <div className="headerBlock">
@@ -38,8 +39,10 @@ function HeaderControls({ activePuzzleIndex, source, data }: Props) {
           </div>
           */}
           <div className="pageButton">
-            <Tooltip title="Email: wittejm@gmail.com">
-              <Button href="mailto:wittejm@gmail.com">
+            <Tooltip title="Share image">
+              <Button onClick={()=>{
+                captureAndShare()
+                }}>
                 <Comment />{" "}
               </Button>
             </Tooltip>
