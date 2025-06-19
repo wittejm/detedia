@@ -4,6 +4,7 @@ import Keyboard from "./Keyboard";
 import Puzzle from "./Puzzle";
 import Submissions from "./Submissions";
 import "./App.css";
+// @ts-ignore
 import domtoimage from 'dom-to-image-more';
 import { useRef } from 'react';
 
