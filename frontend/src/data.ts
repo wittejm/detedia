@@ -1,5 +1,10 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // Apr 21
+  // Apr 26
+  { puzzleNumber: 1394, words: ["agony", "radar", "scath", "clash"] },
+  { puzzleNumber: 1393, words: ["jacks", "knive", "knoll", "known"] },
+  { puzzleNumber: 1392, words: ["clump", "being", "deign", "genie"] },
+  { puzzleNumber: 1391, words: ["paced", "emits", "feely", "gorge", "ounce", "ozone"] },
+  { puzzleNumber: 1390, words: ["dummy", "ratty", "artsy"] },
   { puzzleNumber: 1389, words: ["plays", "spart", "spate"] },
   { puzzleNumber: 1388, words: ["paris", "tired", "dirge"] },
   { puzzleNumber: 1387, words: ["focus", "snowy", "spore", "sloot", "stook", "stood"] },
