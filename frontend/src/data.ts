@@ -1,5 +1,37 @@
 export const wordle: { puzzleNumber: number; words: string[] }[] = [
-  // May 21
+  // June 8th
+  {
+    puzzleNumber: 1439,
+    words: ["kilos", "essay", "suede", "sente", "serge", "serre", "serve"],
+  },
+  { puzzleNumber: 1438, words: ["ladle", "loave", "lease"] },
+  { puzzleNumber: 1437, words: ["ponds", "smart", "crise", "burse", "reuse"] },
+  { puzzleNumber: 1436, words: ["karst", "moldy", "divvy", "edify"] },
+  { puzzleNumber: 1435, words: ["cluck", "quiet", "trout", "astun", "datum"] },
+  { puzzleNumber: 1434, words: ["spook", "floss", "those"] },
+  { puzzleNumber: 1433, words: ["froze", "sense", "tease", "cease"] },
+  { puzzleNumber: 1432, words: ["dater", "baddy", "aland", "anode", "admin"] },
+  { puzzleNumber: 1431, words: ["thrum", "razor", "fried", "green", "preen"] },
+  { puzzleNumber: 1430, words: ["quell", "cruds", "routh", "rough"] },
+  { puzzleNumber: 1429, words: ["pique", "icing", "salis", "radio", "habit"] },
+  {
+    puzzleNumber: 1428,
+    words: ["paper", "fight", "blind", "quids", "dying", "idiom"],
+  },
+  {
+    puzzleNumber: 1427,
+    words: ["stool", "asses", "harsh", "gnash", "abash", "quash"],
+  },
+  { puzzleNumber: 1426, words: ["tetra", "radar", "polar"] },
+  { puzzleNumber: 1425, words: ["looks", "smote", "stong", "shott", "sport"] },
+  { puzzleNumber: 1424, words: ["exist", "paver", "rebud", "drone"] },
+  { puzzleNumber: 1423, words: ["poles", "bunch", "fairy", "drift", "grift"] },
+  {
+    puzzleNumber: 1422,
+    words: ["defer", "baths", "shool", "shiny", "shush", "shuck"],
+  },
+  { puzzleNumber: 1421, words: ["wizen", "dears", "spald", "scald"] },
+  { puzzleNumber: 1420, words: ["weary", "floss", "focal", "folly", "folio"] },
   {
     puzzleNumber: 1419,
     words: ["brass", "ready", "quart", "wharf", "gnarl", "alarm"],
